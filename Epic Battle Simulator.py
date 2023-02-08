@@ -3,15 +3,17 @@ from time import sleep
 import os
 import json
 from threading import Thread
-
-os.system('title EPIC BATTLE SIMULATOR   V1.3')
-
-try:
-    from playsound import playsound
-except ModuleNotFoundError:
-    print("Error: Install \"playsound\" module. INSTALL 1.2.2  >>  pip install playsound==1.2.2")
-    print("Game will continue...")
-    sleep(3)
+import pygame
+if os.system == 'nt':
+    os.system('title EPIC BATTLE SIMULATOR   V1.3')
+else:
+    pass
+# try:
+    # from playsound import playsound
+# except ModuleNotFoundError:
+    # print("Error: Install \"playsound\" module. INSTALL 1.2.2  >>  pip install playsound==1.2.2")
+    # print("Game will continue...")
+    # sleep(3)
 
 
 def start():
@@ -482,10 +484,13 @@ class Enemy:
     def getEnemyHealAmount(self):
         return self.enemyHealAmount
 
+if os.system == 'nt':
+    with open(f"{os.getcwd()}\\files\\enemies\\{enemyName}.json") as file:
+        enemyData = json.load(file)
+elif os.sytem == 'posix':
+    with open(f"{os.getcwd()}/files/enemies/{enemyName}.json") as file:
+        enemyData = json.load(file)
 
-with open(f"{os.getcwd()}\\files\\enemies\\{enemyName}.json") as file:
-    enemyData = json.load(file)
-    
 enemy = Enemy(int(enemyData["maxEnemyHealth"]), int(enemyData["enemyAttackDamage"]), int(enemyData["enemyChargedAttackDamage"]), int(enemyData["enemyBlockDamage"]), int(enemyData["enemyCritDamage"]), int(enemyData["enemyHealAmount"]))
 
 try:
