@@ -266,6 +266,7 @@ def enemyMoveset(playerHealth, enemyHealth, enemyCharged, playerBlock, enemyBloc
         
         return playerHealth, playerBlock
     
+    
     while enemyMove < 1 or enemyMove > 4:
         
         enemyMove = random.randint(1, 4)
@@ -346,6 +347,7 @@ def naturalDisaster(playerHealth, enemyHealth):
                     print(f" Player Health: {playerHealth}/{maxPlayerHealth}")
                     sleep(0.2)
                     print(f" {enemy} Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+                    
         case 2:
             x = random.randint(1,3)
             
@@ -443,10 +445,12 @@ def loadConfig():
         
     return configData
 
+
 with open(f'{os.getcwd()}\\files\\enemies\\enemies.enemies') as file:
     a = file.read()
     enemies = a.splitlines()
     enemyName = random.choice(enemies)
+
 
 class Enemy:
     
