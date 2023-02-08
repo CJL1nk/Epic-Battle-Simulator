@@ -4,7 +4,7 @@ import os
 import json
 from threading import Thread
 
-os.system('title EPIC BATTLE SIMULATOR   V1.2')
+os.system('title EPIC BATTLE SIMULATOR   V1.3')
 
 try:
     from playsound import playsound
