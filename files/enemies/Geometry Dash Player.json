@@ -1,0 +1,8 @@
+{
+    "maxEnemyHealth": "500",
+    "enemyAttackDamage": "150",
+    "enemyChargedAttackDamage": "1000",
+    "enemyBlockDamage": "75",
+    "enemyCritDamage": "25",
+    "enemyHealAmount": "100"
+}
