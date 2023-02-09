@@ -5,7 +5,7 @@ import json
 from threading import Thread
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
-if os.system == 'nt':
+if os.system == 'win32':
     os.system('title EPIC BATTLE SIMULATOR   V1.3')
 else:
     print('Running in linux')
@@ -118,7 +118,7 @@ try:
     def attack(playerHealth, enemyHealth, enemyBlock):
 
         damage = playerAttackDamage
-        if os.system == 'nt':
+        if os.system == 'win32':
             filename=f"{os.getcwd()}\\files\\sounds\\player\\player-hit-hurt.wav"
         else:
             filename=f"{os.getcwd()}/files/sounds/player/player-hit-hurt.wav"
@@ -441,7 +441,7 @@ try:
 
 
     def play_sound():
-        if os.system == 'nt':    
+        if os.system == 'win32':    
             filename=f"{os.getcwd()}\\files\\sounds\\music\\Leviathan_SlendStone.wav"
         else:
             filename=f"{os.getcwd()}/files/sounds/music/Leviathan_SlendStone.wav"   
@@ -449,7 +449,7 @@ try:
         sound = pygame.mixer.Sound(filename)
         channel1.play(sound, loops = -1)
     def loadConfig():
-        if os.system == 'nt':
+        if os.system == 'win32':
             with open(f"{os.getcwd()}\\files\\config.json") as file:
                 configData = json.load(file)
         else:
@@ -458,7 +458,7 @@ try:
 
         return configData
 
-    if os.system == 'nt':
+    if os.system == 'win32':
         with open(f'{os.getcwd()}\\files\\enemies\\enemies.enemies') as file:
             a = file.read()
             enemies = a.splitlines()
@@ -499,7 +499,7 @@ try:
         def getEnemyHealAmount(self):
             return self.enemyHealAmount
 
-    if os.system == 'nt':
+    if os.system == 'win32':
         with open(f"{os.getcwd()}\\files\\enemies\\{enemyName}.json") as file:
             enemyData = json.load(file)
     else:
