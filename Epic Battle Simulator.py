@@ -3,6 +3,7 @@ from time import sleep
 import os
 import json
 from threading import Thread
+from colorama import Fore, Back, Style
 from sys import platform
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
@@ -10,6 +11,21 @@ if platform == 'win32':
     os.system('title EPIC BATTLE SIMULATOR   V1.3')
 else:
     print('Running in linux')
+
+class color:
+   ORANGE = '\033[38;5;208m'
+   PINK = '\033[95m'
+   PURPLE = '\033[95m'
+   DARKCYAN = '\033[36m'
+   OKBLUE = '\033[94m'
+   CYAN = '\033[96m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   BLINK = '\033[5m'
+   END = '\033[0m'
 
 pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12) 
 channel1 = pygame.mixer.Channel(0) # argument must be int
@@ -43,7 +59,7 @@ try:
                     playerCharged += 1
 
                 case 2:
-                    print("\n\n You raise your hands to block...")
+                    print(f"{color.YELLOW}\n\n You raise your hands to block...{color.END}")
                     if platform == 'win32':
                             filename=f"{os.getcwd()}\\files\\sounds\\player\\player_block.wav"
 
@@ -116,7 +132,7 @@ try:
                 continue
             
             if playerCharged < 5 and choice == 4:
-                print("\n Charged attack not ready!")
+                print(f"\n {color.PINK}Charged attack not ready!{color.END}")
                 choice = -1
 
             elif choice < 1 or choice > 4:
@@ -129,7 +145,7 @@ try:
 
         damage = playerAttackDamage
 
-        print("\n\n You attack!")
+        print(f"\n\n {color.RED}You attack!{color.END}")
 
         if enemyBlock:
             sleep(1)
@@ -138,7 +154,7 @@ try:
             enemyBlock = False
 
         if random.randint(0, 9) == 9:
-            print(" Critical strike!")
+            print(f" {color.RED}C{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
             damage += playerCritDamage
             
             if platform == 'win32':
@@ -187,7 +203,7 @@ try:
         sound = pygame.mixer.Sound(filename)
         channel2.play(sound)
 
-        print("\n\n You heal!")
+        print(f"\n\n {color.GREEN}You heal!{color.END}")
         sleep(1)
 
         if playerHealth > maxPlayerHealth:
@@ -210,7 +226,7 @@ try:
         sound = pygame.mixer.Sound(filename)
         channel2.play(sound)
 
-        print("\n\n You CHARGED ATTACK!")
+        print(f"\n\n {color.PINK}You CHARGED ATTACK!{color.END}")
         
         sleep(1)
 
@@ -244,7 +260,7 @@ try:
 
             damage = enemy.getEnemyAttackDamage()
 
-            print(f"\n\n {enemyName} attacks!")
+            print(f"\n\n {enemyName} {color.RED}attacks!{color.END}")
 
             if playerBlock:
                 sleep(1)
@@ -303,7 +319,7 @@ try:
             sound = pygame.mixer.Sound(filename)
             channel2.play(sound)
 
-            print(f"\n\n {enemyName} heals!")
+            print(f"\n\n {enemyName} {color.GREEN}heals!{color.END}")
             sleep(1)
 
             if enemyHealth > enemy.getMaxEnemyHealth():
@@ -319,7 +335,7 @@ try:
 
             damage = enemy.getEnemyChargedAttackDamage()
 
-            print(f"\n\n {enemyName} CHARGED ATTACKS!")
+            print(f"\n\n {enemyName} {color.PINK}CHARGED ATTACKS!{color.END}")
             sleep(1)
 
             if playerBlock:
@@ -362,7 +378,7 @@ try:
                 enemyCharged += 1
 
             case 2:
-                print(f"\n\n {enemyName} raises their hands to block...")
+                print(f"\n\n {enemyName} {color.YELLOW}raises their hands to block...{color.END}")
                 enemyBlock = True
                 if platform == 'win32':
                     filename=f"{os.getcwd()}\\files\\sounds\\player\\player_block.wav"
