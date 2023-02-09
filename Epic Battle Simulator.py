@@ -406,7 +406,7 @@ try:
 
                         print(f" Player Health: {playerHealth}/{maxPlayerHealth}")
                         sleep(0.2)
-                        print(f" {enemy} Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+                        print(f" {enemyName} Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
 
             case 2:
                 x = random.randint(1,3)
@@ -443,7 +443,7 @@ try:
 
                         print(f" Player Health: {playerHealth}/{maxPlayerHealth}")
                         sleep(0.2)
-                        print(f" {enemy} Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+                        print(f" {enemyName} Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
 
         return playerHealth, enemyHealth
 
