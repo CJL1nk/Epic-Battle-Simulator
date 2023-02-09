@@ -119,17 +119,11 @@ try:
     def attack(playerHealth, enemyHealth, enemyBlock):
 
         damage = playerAttackDamage
-        if platform == 'win32':
-            filename=f"{os.getcwd()}\\files\\sounds\\player\\player-hit-hurt.wav"
-        else:
-            filename=f"{os.getcwd()}/files/sounds/player/player-hit-hurt.wav"
-        sound = pygame.mixer.Sound(filename)
-        channel2.play(sound)
 
         print("\n\n You attack!")
-        sleep(1)
 
         if enemyBlock:
+            sleep(1)
             print(f" {enemyName} blocks!")
             damage -= enemy.getEnemyBlockDamage()
             enemyBlock = False
@@ -137,6 +131,27 @@ try:
         if random.randint(0, 9) == 9:
             print(" Critical strike!")
             damage += playerCritDamage
+            
+            if platform == 'win32':
+                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player-crit.wav"
+                
+            else:
+                filename=f"{os.getcwd()}/files/sounds/player/player-crit.wav"
+                
+            sound = pygame.mixer.Sound(filename)
+            channel2.play(sound)
+            sleep(1)
+            
+        else:
+            if platform == 'win32':
+                filename=f"{os.getcwd()}\\files\\sounds\\player\\player-hit-hurt.wav"
+                
+            else:
+                filename=f"{os.getcwd()}/files/sounds/player/player-hit-hurt.wav"
+                
+            sound = pygame.mixer.Sound(filename)
+            channel2.play(sound)
+            sleep(1)
 
         if damage < 0:
             damage = 0
@@ -154,6 +169,14 @@ try:
     def heal(playerHealth):
 
         playerHealth += playerHealAmount
+        
+        if platform == 'win32':
+            filename=f"{os.getcwd()}\\files\\sounds\\player\\player_heal.wav"
+        else:
+            filename=f"{os.getcwd()}/files/sounds/player/player_heal.wav"
+            
+        sound = pygame.mixer.Sound(filename)
+        channel2.play(sound)
 
         print("\n\n You heal!")
         sleep(1)
@@ -205,9 +228,9 @@ try:
             damage = enemy.getEnemyAttackDamage()
 
             print(f"\n\n {enemyName} attacks!")
-            sleep(1)
 
             if playerBlock:
+                sleep(1)
                 print(" You block!")
                 damage -= playerBlockDamage
                 playerBlock = False
@@ -215,6 +238,27 @@ try:
             if random.randint(0, 9) == 9:
                 print(f" {enemyName} hits a critical strike!")
                 damage += enemy.getEnemyCritDamage()
+                
+                if platform == 'win32':
+                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player-crit.wav"
+                
+                else:
+                    filename=f"{os.getcwd()}/files/sounds/player/player-crit.wav"
+                
+                sound = pygame.mixer.Sound(filename)
+                channel2.play(sound)
+                sleep(1)
+                
+            else:
+                if platform == 'win32':
+                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player-hit-hurt.wav"
+                
+                else:
+                    filename=f"{os.getcwd()}/files/sounds/player/player-hit-hurt.wav"
+                
+            sound = pygame.mixer.Sound(filename)
+            channel2.play(sound)
+            sleep(1)
 
             if damage < 0:
                 damage = 0
@@ -233,6 +277,14 @@ try:
 
 
             enemyHealth += enemy.getEnemyHealAmount()
+            
+            if platform == 'win32':
+                filename=f"{os.getcwd()}\\files\\sounds\\player\\player_heal.wav"
+            else:
+                filename=f"{os.getcwd()}/files/sounds/player/player_heal.wav"
+            
+            sound = pygame.mixer.Sound(filename)
+            channel2.play(sound)
 
             print(f"\n\n {enemyName} heals!")
             sleep(1)
@@ -442,6 +494,7 @@ try:
 
 
     def play_sound():
+        
         if platform == 'win32':    
             filename=f"{os.getcwd()}\\files\\sounds\\music\\Leviathan_SlendStone.wav"
         else:
@@ -449,7 +502,10 @@ try:
         
         sound = pygame.mixer.Sound(filename)
         channel1.play(sound, loops = -1)
+        
+        
     def loadConfig():
+        
         if platform == 'win32':
             with open(f"{os.getcwd()}\\files\\config.json") as file:
                 configData = json.load(file)
@@ -459,11 +515,13 @@ try:
 
         return configData
 
+
     if platform == 'win32':
         with open(f'{os.getcwd()}\\files\\enemies\\enemies.enemies') as file:
             a = file.read()
             enemies = a.splitlines()
             enemyName = random.choice(enemies)
+            
     else:
         with open(f'{os.getcwd()}/files/enemies/enemies.enemies') as file:
             a = file.read()
@@ -503,6 +561,7 @@ try:
     if platform == 'win32':
         with open(f"{os.getcwd()}\\files\\enemies\\{enemyName}.json") as file:
             enemyData = json.load(file)
+            
     else:
         with open(f"{os.getcwd()}/files/enemies/{enemyName}.json") as file:
             enemyData = json.load(file)
