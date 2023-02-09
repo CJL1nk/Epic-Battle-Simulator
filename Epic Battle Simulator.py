@@ -344,6 +344,11 @@ try:
         def enemyChargedAttack(playerHealth, playerBlock):
 
             damage = enemy.getEnemyChargedAttackDamage()
+            
+            if platform == 'win32':
+                filename=f"{os.getcwd()}\\files\\sounds\\player\\player_charged.wav"
+            else:
+                filename=f"{os.getcwd()}/files/sounds/player/player_charged.wav"
 
             print(f"\n\n {color.ORANGE}{enemyName}{color.END} {color.PINK}CHARGED ATTACKS!{color.END}")
             sleep(1)
