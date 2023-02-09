@@ -4,5 +4,5 @@
     "enemyChargedAttackDamage": "15",
     "enemyBlockDamage": "100",
     "enemyCritDamage": "10",
-    "enemyHealAmount": "50"
+    "enemyHealAmount": "10"
 }
