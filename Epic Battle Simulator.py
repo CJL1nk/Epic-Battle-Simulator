@@ -44,6 +44,15 @@ try:
 
                 case 2:
                     print("\n\n You raise your hands to block...")
+                    if platform == 'win32':
+                            filename=f"{os.getcwd()}\\files\\sounds\\player\\player_block.wav"
+
+                    else:
+                        filename=f"{os.getcwd()}/files/sounds/player/player_block.wav"
+
+                    sound = pygame.mixer.Sound(filename)
+                    channel2.play(sound)
+
                     playerBlock = True
                     sleep(1)
 
@@ -193,8 +202,16 @@ try:
     def chargedAttack(playerHealth, enemyHealth, enemyBlock):
 
         damage = playerChargedAttackDamage
+        if platform == 'win32':
+            filename=f"{os.getcwd()}\\files\\sounds\\player\\player_charged.wav"
+        else:
+            filename=f"{os.getcwd()}/files/sounds/player/player_charged.wav"
+        
+        sound = pygame.mixer.Sound(filename)
+        channel2.play(sound)
 
         print("\n\n You CHARGED ATTACK!")
+        
         sleep(1)
 
         if enemyBlock:
@@ -347,6 +364,15 @@ try:
             case 2:
                 print(f"\n\n {enemyName} raises their hands to block...")
                 enemyBlock = True
+                if platform == 'win32':
+                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player_block.wav"
+                
+                else:
+                    filename=f"{os.getcwd()}/files/sounds/player/player_block.wav"
+                
+                sound = pygame.mixer.Sound(filename)
+                channel2.play(sound)
+
                 sleep(1)
 
             case 3:
@@ -501,6 +527,7 @@ try:
             filename=f"{os.getcwd()}/files/sounds/music/Leviathan_SlendStone.wav"   
         
         sound = pygame.mixer.Sound(filename)
+        # channel1.set_volume(0.7)
         channel1.play(sound, loops = -1)
         
         
