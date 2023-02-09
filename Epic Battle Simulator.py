@@ -3,12 +3,11 @@ from time import sleep
 import os
 import json
 from threading import Thread
-from colorama import Fore, Back, Style
 from sys import platform
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 if platform == 'win32':
-    os.system('title EPIC BATTLE SIMULATOR   V1.3')
+    os.system('title EPIC BATTLE SIMULATOR   V1.4')
 else:
     print('Running in linux')
 
