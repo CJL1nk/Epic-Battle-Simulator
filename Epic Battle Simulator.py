@@ -8,7 +8,7 @@ from sys import platform
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 if platform == 'win32':
-    os.system('title EPIC BATTLE SIMULATOR   V1.3')
+    os.system('title EPIC BATTLE SIMULATOR   V1.4')
 else:
     print('Running in linux')
 
