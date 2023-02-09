@@ -145,7 +145,7 @@ try:
 
         damage = playerAttackDamage
 
-        print(f"\n\n {color.RED}You attack!{color.END}")
+        print(f"\n\n You {color.RED}attack!{color.END}")
 
         if enemyBlock:
             sleep(1)
@@ -203,7 +203,7 @@ try:
         sound = pygame.mixer.Sound(filename)
         channel2.play(sound)
 
-        print(f"\n\n {color.GREEN}You heal!{color.END}")
+        print(f"\n\n You {color.GREEN}heal!{color.END}")
         sleep(1)
 
         if playerHealth > maxPlayerHealth:
