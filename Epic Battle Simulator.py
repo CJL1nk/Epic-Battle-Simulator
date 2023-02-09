@@ -44,7 +44,7 @@ try:
         thread = Thread(target=play_sound)
         thread.start()
 
-        print(f" A wild {enemyName} approaches!")
+        print(f" A wild {color.ORANGE}{enemyName}{color.END} approaches!")
         sleep(0.5)
 
         while playerHealth > 0 or enemyHealth > 0:
@@ -87,7 +87,7 @@ try:
                 break
             
             sleep(0.25)
-            print(f"\n {enemyName}'s turn...")
+            print(f"\n {color.ORANGE}{enemyName}'s{color.END} turn...")
             sleep(0.75)
 
             playerHealth, enemyHealth, enemyCharged, playerBlock, enemyBlock = enemyMoveset(playerHealth, enemyHealth, enemyCharged, playerBlock, enemyBlock)
@@ -109,15 +109,15 @@ try:
 
         print("\n   ATTACK")
         sleep(0.1)
-        print(" [1] Attack")
+        print(f" [1] {color.RED}Attack{color.END}")
         sleep(0.1)
-        print(" [2] Block")
+        print(f" [2] {color.YELLOW}Block{color.END}")
         sleep(0.1)
-        print(" [3] Heal")
+        print(f" [3] {color.GREEN}Heal{color.END}")
 
         if playerCharged >= 5:
             sleep(0.1)
-            print(" [4] CHARGED ATTACK")
+            print(f" [4] {color.PINK}CHARGED ATTACK{color.END}")
 
         while choice < 1 or choice > 4:
 
@@ -145,11 +145,11 @@ try:
 
         damage = playerAttackDamage
 
-        print(f"\n\n {color.RED}You attack!{color.END}")
+        print(f"\n\n You {color.RED}attack!{color.END}")
 
         if enemyBlock:
             sleep(1)
-            print(f" {enemyName} blocks!")
+            print(f" {color.ORANGE}{enemyName}{color.END} blocks!")
             damage -= enemy.getEnemyBlockDamage()
             enemyBlock = False
 
@@ -185,7 +185,7 @@ try:
 
         checkHealth(playerHealth, enemyHealth)
 
-        print(f" {enemyName} health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+        print(f" {color.ORANGE}{enemyName}{color.END} health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
         sleep(1)
 
         return enemyHealth, enemyBlock
@@ -203,13 +203,13 @@ try:
         sound = pygame.mixer.Sound(filename)
         channel2.play(sound)
 
-        print(f"\n\n {color.GREEN}You heal!{color.END}")
+        print(f"\n\n You {color.GREEN}heal!{color.END}")
         sleep(1)
 
         if playerHealth > maxPlayerHealth:
             playerHealth = maxPlayerHealth
 
-        print(f" Your health: {playerHealth}/{maxPlayerHealth}")
+        print(f" Your health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
         sleep(1)
 
         return playerHealth
@@ -226,17 +226,17 @@ try:
         sound = pygame.mixer.Sound(filename)
         channel2.play(sound)
 
-        print(f"\n\n {color.PINK}You CHARGED ATTACK!{color.END}")
+        print(f"\n\n You {color.PINK}CHARGED ATTACK!{color.END}")
         
         sleep(1)
 
         if enemyBlock:
-            print(f" {enemyName} blocks!")
+            print(f" {color.ORANGE}{enemyName}{color.END} blocks!")
             damage -= enemy.getEnemyBlockDamage()
             enemyBlock = False
 
         if random.randint(0, 9) == 9:
-            print(" Critical strike!")
+            print(" {color.RED}C{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
             damage += playerCritDamage
 
         if damage < 0:
@@ -246,7 +246,7 @@ try:
 
         checkHealth(playerHealth, enemyHealth)
 
-        print(f" {enemyName} health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+        print(f" {color.ORANGE}{enemyName}{color.END} health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
         sleep(1)
 
         return enemyHealth, enemyBlock
@@ -260,16 +260,16 @@ try:
 
             damage = enemy.getEnemyAttackDamage()
 
-            print(f"\n\n {enemyName} {color.RED}attacks!{color.END}")
+            print(f"\n\n {color.ORANGE}{enemyName}{color.END} {color.RED}attacks!{color.END}")
 
             if playerBlock:
                 sleep(1)
-                print(" You block!")
+                print(f" You {color.YELLOW}block!{color.END}")
                 damage -= playerBlockDamage
                 playerBlock = False
 
             if random.randint(0, 9) == 9:
-                print(f" {enemyName} hits a critical strike!")
+                print(f" {color.ORANGE}{enemyName}{color.END} hits a {color.RED}c{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
                 damage += enemy.getEnemyCritDamage()
                 
                 if platform == 'win32':
@@ -300,7 +300,7 @@ try:
 
             checkHealth(playerHealth, enemyHealth)
 
-            print(f" Your health: {playerHealth}/{maxPlayerHealth}")
+            print(f" Your health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
             sleep(1)
 
             return playerHealth, playerBlock
@@ -319,13 +319,13 @@ try:
             sound = pygame.mixer.Sound(filename)
             channel2.play(sound)
 
-            print(f"\n\n {enemyName} {color.GREEN}heals!{color.END}")
+            print(f"\n\n {color.ORANGE}{enemyName}{color.END} {color.GREEN}heals!{color.END}")
             sleep(1)
 
             if enemyHealth > enemy.getMaxEnemyHealth():
                 enemyHealth = enemy.getMaxEnemyHealth()
 
-            print(f" {enemyName} health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+            print(f" {color.ORANGE}{enemyName}{color.END} health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
             sleep(1)
 
             return enemyHealth    
@@ -335,16 +335,16 @@ try:
 
             damage = enemy.getEnemyChargedAttackDamage()
 
-            print(f"\n\n {enemyName} {color.PINK}CHARGED ATTACKS!{color.END}")
+            print(f"\n\n {color.ORANGE}{enemyName}{color.END} {color.PINK}CHARGED ATTACKS!{color.END}")
             sleep(1)
 
             if playerBlock:
-                print(" You block!")
+                print(f" You {color.YELLOW}block!{color.END}")
                 damage -= playerBlockDamage
                 playerBlock = False
 
             if random.randint(0, 9) == 9:
-                print(f" {enemyName} hits a critical strike!")
+                print(f" {color.ORANGE}{enemyName}{color.END} hits a {color.RED}c{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
                 damage += enemy.getEnemyCritDamage()
 
             if damage < 0:
@@ -354,7 +354,7 @@ try:
 
             checkHealth(playerHealth, enemyHealth)
 
-            print(f" Your health: {playerHealth}/{maxPlayerHealth}")
+            print(f" Your health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
             sleep(1)
 
             return playerHealth, playerBlock
@@ -378,7 +378,7 @@ try:
                 enemyCharged += 1
 
             case 2:
-                print(f"\n\n {enemyName} {color.YELLOW}raises their hands to block...{color.END}")
+                print(f"\n\n {color.ORANGE}{enemyName}{color.END} {color.YELLOW}raises their hands to block...{color.END}")
                 enemyBlock = True
                 if platform == 'win32':
                     filename=f"{os.getcwd()}\\files\\sounds\\player\\player_block.wav"
@@ -418,25 +418,25 @@ try:
 
                 match x:
                     case 1:
-                        print("\n A meteor falls from the sky and hits you. It deals 300 damage!")
+                        print(f"\n A meteor falls from the sky and hits you. {color.RED}It deals 300 damage!{color.END}")
                         sleep(0.5)
 
                         playerHealth -= 300
                         if playerHealth < 0:
                             playerHealth = 0
 
-                        print(f" Player Health: {playerHealth}/{maxPlayerHealth}")
+                        print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
                     case 2:
-                        print(f"\n A meteor falls from the sky and hits the {enemyName}. It deals 300 damage!")
+                        print(f"\n A meteor falls from the sky and hits the {color.ORANGE}{enemyName}{color.END}. {color.RED}It deals 300 damage!{color.END}")
                         sleep(0.5)
 
                         enemyHealth -= 300
                         if enemyHealth < 0:
                             enemyHealth = 0
 
-                        print(f" Enemy Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+                        print(f" Enemy Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
                     case 3:
-                        print(f"\n A meteor falls from the sky and hits you and the {enemyName}. It deals 300 damage!")
+                        print(f"\n A meteor falls from the sky and hits you and the {color.ORANGE}{enemyName}{color.END}. {color.RED}It deals 300 damage!{color.END}")
                         sleep(0.5)
 
                         enemyHealth -= 300
@@ -446,34 +446,34 @@ try:
                         if enemyHealth < 0:
                             enemyHealth = 0
 
-                        print(f" Player Health: {playerHealth}/{maxPlayerHealth}")
+                        print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
                         sleep(0.2)
-                        print(f" {enemyName} Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+                        print(f" {color.ORANGE}{enemyName}{color.END} Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
 
             case 2:
                 x = random.randint(1,3)
 
                 match x:
                     case 1:
-                        print("\n A fairy emerges from the clouds and heals you for 250 health!")
+                        print(f"\n A fairy emerges from the clouds and {color.GREEN}heals you for 250 health!{color.END}")
                         sleep(0.5)
 
                         playerHealth += 250
                         if playerHealth > maxPlayerHealth:
                             playerHealth = maxPlayerHealth
 
-                        print(f" Player Health: {playerHealth}/{maxPlayerHealth}")
+                        print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
                     case 2:
-                        print(f"\n A fairy emerges from the clouds and heals the {enemyName} for 250 health!")
+                        print(f"\n A fairy emerges from the clouds and {color.GREEN}heals the {color.ORANGE}{enemyName}{color.END} for 250 health!{color.END}")
                         sleep(0.5)
 
                         enemyHealth += 250
                         if enemyHealth > enemy.getMaxEnemyHealth():
                             enemyHealth = enemy.getMaxEnemyHealth()
 
-                        print(f" Enemy Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+                        print(f" Enemy Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
                     case 3:
-                        print(f"\n A fairy emerges from the clouds and heals both you and the {enemyName} for 250 health!")
+                        print(f"\n A fairy emerges from the clouds and {color.GREEN}heals both you and the {color.ORANGE}{enemyName}{color.END} for 250 health!{color.END}")
                         sleep(0.5)
 
                         enemyHealth += 250
@@ -483,9 +483,9 @@ try:
                         if enemyHealth > enemy.getMaxEnemyHealth():
                             enemyHealth = enemy.getMaxEnemyHealth()
 
-                        print(f" Player Health: {playerHealth}/{maxPlayerHealth}")
+                        print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
                         sleep(0.2)
-                        print(f" {enemyName} Health: {enemyHealth}/{enemy.getMaxEnemyHealth()}")
+                        print(f" {color.ORANGE}{enemyName}{color.END} Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
 
         return playerHealth, enemyHealth
 
@@ -501,7 +501,7 @@ try:
             sleep(2)
             print("\n\n !!!")
             sleep(1)
-            print(" Sans emerges from the forest and gives you a hot dog. It was very tasty.")
+            print(f" {color.PINK}Sans{color.END} emerges from the forest and gives you a hot dog. It was very tasty.")
             sleep(0.5)
 
         if rod == 345:
@@ -509,7 +509,7 @@ try:
             sleep(2)
             print("\n\n !!!")
             sleep(1)
-            print(" You found a Rod of Discord!")
+            print(f" You found a {color.GREEN}Rod of Discord!{color.END}")
             sleep(0.5)
 
             foundRod = True
@@ -517,7 +517,7 @@ try:
 
             if random.randint(1,100) == 64:
 
-                print("The Adult Eidolon Wyrm emerges from the depths of the abyss and kills you!")
+                print(" The Adult Eidolon Wyrm emerges from the depths of the abyss and kills you!")
                 playerHealth = 0
 
         return playerHealth
@@ -527,11 +527,11 @@ try:
 
         if playerHealth <= 0:
 
-            input("\n\n\n You died!")
+            input(f"\n\n\n {color.RED}You died!{color.END}")
             exit(0)
 
         if enemyHealth <= 0:
-            input("\n\n\n You win!")
+            input(f"\n\n\n {color.YELLOW}You win!{color.END}")
             exit(0)
 
 
