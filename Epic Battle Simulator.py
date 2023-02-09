@@ -9,12 +9,10 @@ if os.system == 'nt':
     os.system('title EPIC BATTLE SIMULATOR   V1.3')
 else:
     print('Running in linux')
-# try:
-    # from playsound import playsound
-# except ModuleNotFoundError:
-    # print("Error: Install \"playsound\" module. INSTALL 1.2.2  >>  pip install playsound==1.2.2")
-    # print("Game will continue...")
-    # sleep(3)
+
+pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12) 
+channel1 = pygame.mixer.Channel(0) # argument must be int
+channel2 = pygame.mixer.Channel(1)
 
 try:
     def start():
@@ -120,6 +118,12 @@ try:
     def attack(playerHealth, enemyHealth, enemyBlock):
 
         damage = playerAttackDamage
+        if os.system == 'nt':
+            filename=f"{os.getcwd()}\\files\\sounds\\player\\player-hit-hurt.wav"
+        else:
+            filename=f"{os.getcwd()}/files/sounds/player/player-hit-hurt.wav"
+        sound = pygame.mixer.Sound(filename)
+        channel2.play(sound)
 
         print("\n\n You attack!")
         sleep(1)
@@ -440,14 +444,10 @@ try:
         if os.system == 'nt':    
             filename=f"{os.getcwd()}\\files\\sounds\\music\\Leviathan_SlendStone.wav"
         else:
-            filename=f"{os.getcwd()}/files/sounds/music/Leviathan_SlendStone.wav"
-        pygame.init()
-        pygame.mixer.init()
-        pygame.mixer.music.load(filename)
-        pygame.mixer.music.play()
-        pygame.event.wait()
-
-
+            filename=f"{os.getcwd()}/files/sounds/music/Leviathan_SlendStone.wav"   
+        
+        sound = pygame.mixer.Sound(filename)
+        channel1.play(sound, loops = -1)
     def loadConfig():
         if os.system == 'nt':
             with open(f"{os.getcwd()}\\files\\config.json") as file:
