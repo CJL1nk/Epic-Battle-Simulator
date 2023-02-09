@@ -26,6 +26,8 @@ class color:
    UNDERLINE = '\033[4m'
    BLINK = '\033[5m'
    END = '\033[0m'
+
+   
 def rainbow(string):
     rainbow=[color.RED, color.ORANGE, color.YELLOW, color.GREEN, color.OKBLUE, color.PURPLE]
     number = 0
