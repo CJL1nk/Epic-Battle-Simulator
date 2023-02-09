@@ -12,6 +12,7 @@ if platform == 'win32':
 else:
     print('Running in linux')
 
+
 class color:
    ORANGE = '\033[38;5;208m'
    PINK = '\033[95m'
