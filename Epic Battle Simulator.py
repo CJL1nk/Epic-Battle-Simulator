@@ -26,6 +26,14 @@ class color:
    UNDERLINE = '\033[4m'
    BLINK = '\033[5m'
    END = '\033[0m'
+def rainbow(string):
+    rainbow=[color.RED, color.ORANGE, color.YELLOW, color.GREEN, color.OKBLUE, color.PURPLE]
+    number = 0
+    if number == 6:
+        number == 0
+    for x in string:
+        print(f'{rainbow[number]} {x}')
+        number += 1
 
 pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12) 
 channel1 = pygame.mixer.Channel(0) # argument must be int
