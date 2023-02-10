@@ -246,7 +246,7 @@ try:
             enemyBlock = False
 
         if random.randint(0, 9) == 9:
-            print(" {color.RED}C{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
+            print(f" {color.RED}C{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
             damage += playerCritDamage
 
         if damage < 0:
