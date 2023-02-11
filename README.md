@@ -21,3 +21,9 @@ install requirements
 Start gaming my brother in christ :3
 
     python "Epic Battle Simulator.py"
+
+## TODO:
+
+- [ ] Add Weapons to the game
+- [ ] Add More Enemies 
+- [ ] More Natural Disastures/Events
