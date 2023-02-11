@@ -3,6 +3,10 @@
 Epic-battle-simulator is a top tier gameply experience 
 to play the game do these steps
 
+# IMPORTANT!
+
+This game Uses the pygame library to play sound so if you try to play the game on python 3.11 It will **NOT** run
+
 ## Setup
 
 setup enviroment
