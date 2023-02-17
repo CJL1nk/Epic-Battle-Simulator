@@ -38,7 +38,7 @@ def rainbow(string):
         number += 1
 
 pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12) 
-channel1 = pygame.mixer.Channel(0) # argument must be int
+channel1 = pygame.mixer.Channel(0)
 channel2 = pygame.mixer.Channel(1)
 
 try:
