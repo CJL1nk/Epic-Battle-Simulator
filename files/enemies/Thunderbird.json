@@ -1,0 +1,9 @@
+{
+      "name": "Thunderbird",
+      "maxEnemyHealth": 3400,
+      "enemyAttackDamage": 165,
+      "enemyChargedAttackDamage": 235,
+      "enemyBlockDamage": 23,
+      "enemyCritDamage": 88,
+      "enemyHealAmount": 39
+    }

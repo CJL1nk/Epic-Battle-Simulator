@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Flame Elemental",
+    "maxEnemyHealth": 2000,
+    "enemyAttackDamage": 100,
+    "enemyChargedAttackDamage": 175,
+    "enemyBlockDamage": 10,
+    "enemyCritDamage": 50,
+    "enemyHealAmount": 25
+  },
+  {
+    "name": "Frost Behemoth",
+    "maxEnemyHealth": 2500,
+    "enemyAttackDamage": 120,
+    "enemyChargedAttackDamage": 200,
+    "enemyBlockDamage": 15,
+    "enemyCritDamage": 60,
+    "enemyHealAmount": 30
+  },
+  {
+    "name": "Shadow Wyrm",
+    "maxEnemyHealth": 1800,
+    "enemyAttackDamage": 90,
+    "enemyChargedAttackDamage": 160,
+    "enemyBlockDamage": 5,
+    "enemyCritDamage": 70,
+    "enemyHealAmount": 20
+  },
+  {
+    "name": "Thunder Golem",
+    "maxEnemyHealth": 3000,
+    "enemyAttackDamage": 150,
+    "enemyChargedAttackDamage": 220,
+    "enemyBlockDamage": 20,
+    "enemyCritDamage": 80,
+    "enemyHealAmount": 35
+  },
+  {
+    "name": "Venomous Hydra",
+    "maxEnemyHealth": 2200,
+    "enemyAttackDamage": 110,
+    "enemyChargedAttackDamage": 190,
+    "enemyBlockDamage": 12,
+    "enemyCritDamage": 55,
+    "enemyHealAmount": 27
+  },
+  {
+    "name": "Molten Behemoth",
+    "maxEnemyHealth": 2800,
+    "enemyAttackDamage": 130,
+    "enemyChargedAttackDamage": 190,
+    "enemyBlockDamage": 18,
+    "enemyCritDamage": 65,
+    "enemyHealAmount": 32
+  },
+  {
+    "name": "Spectral Wraith",
+    "maxEnemyHealth": 2100,
+    "enemyAttackDamage": 95,
+    "enemyChargedAttackDamage": 165,
+    "enemyBlockDamage": 8,
+    "enemyCritDamage": 45,
+    "enemyHealAmount": 23
+  },
+  {
+    "name": "Tidal Leviathan",
+    "maxEnemyHealth": 3200,
+    "enemyAttackDamage": 160,
+    "enemyChargedAttackDamage": 230,
+    "enemyBlockDamage": 22,
+    "enemyCritDamage": 85,
+    "enemyHealAmount": 38
+  },
+  {
+    "name": "Quicksilver Serpent",
+    "maxEnemyHealth": 2400,
+    "enemyAttackDamage": 115,
+    "enemyChargedAttackDamage": 180,
+    "enemyBlockDamage": 13,
+    "enemyCritDamage": 60,
+    "enemyHealAmount": 28
+  },
+  {
+    "name": "Chaos Chimera",
+    "maxEnemyHealth": 3500,
+    "enemyAttackDamage": 170,
+    "enemyChargedAttackDamage": 240,
+    "enemyBlockDamage": 25,
+    "enemyCritDamage": 90,
+    "enemyHealAmount": 40
+  },
+  {
+    "name": "Abyssal Kraken",
+    "maxEnemyHealth": 2700,
+    "enemyAttackDamage": 140,
+    "enemyChargedAttackDamage": 205,
+    "enemyBlockDamage": 16,
+    "enemyCritDamage": 75,
+    "enemyHealAmount": 33
+  },
+  {
+    "name": "Radiant Phoenix",
+    "maxEnemyHealth": 2300,
+    "enemyAttackDamage": 105,
+    "enemyChargedAttackDamage": 185,
+    "enemyBlockDamage": 11,
+    "enemyCritDamage": 57,
+    "enemyHealAmount": 26
+  },
+  {
+    "name": "Ethereal Banshee",
+    "maxEnemyHealth": 2600,
+    "enemyAttackDamage": 125,
+    "enemyChargedAttackDamage": 195,
+    "enemyBlockDamage": 14,
+    "enemyCritDamage": 68,
+    "enemyHealAmount": 31
+  },
+  {
+    "name": "Ancient Sphinx",
+    "maxEnemyHealth": 3100,
+    "enemyAttackDamage": 155,
+    "enemyChargedAttackDamage": 225,
+    "enemyBlockDamage": 21,
+    "enemyCritDamage": 82,
+    "enemyHealAmount": 36
+  },
+  {
+    "name": "Feral Minotaur",
+    "maxEnemyHealth": 1900,
+    "enemyAttackDamage": 85,
+    "enemyChargedAttackDamage": 155,
+    "enemyBlockDamage": 6,
+    "enemyCritDamage": 42,
+    "enemyHealAmount": 21
+  },
+  {
+    "name": "Crimson Basilisk",
+    "maxEnemyHealth": 2900,
+    "enemyAttackDamage": 135,
+    "enemyChargedAttackDamage": 195,
+    "enemyBlockDamage": 17,
+    "enemyCritDamage": 72,
+    "enemyHealAmount": 34
+  },
+  {
+    "name": "Phantom Specter",
+    "maxEnemyHealth": 2000,
+    "enemyAttackDamage": 100,
+    "enemyChargedAttackDamage": 170,
+    "enemyBlockDamage": 9,
+    "enemyCritDamage": 48,
+    "enemyHealAmount": 24
+  },
+  {
+    "name": "Thunderbird",
+    "maxEnemyHealth": 3400,
+    "enemyAttackDamage": 165,
+    "enemyChargedAttackDamage": 235,
+    "enemyBlockDamage": 23,
+    "enemyCritDamage": 88,
+    "enemyHealAmount": 39
+  },
+  {
+    "name": "Dark Phoenix",
+    "maxEnemyHealth": 2500,
+    "enemyAttackDamage": 120,
+    "enemyChargedAttackDamage": 190,
+    "enemyBlockDamage": 13,
+    "enemyCritDamage": 63,
+    "enemyHealAmount": 29
+  },
+  {
+    "name": "Mystic Unicorn",
+    "maxEnemyHealth": 3600,
+    "enemyAttackDamage": 175,
+    "enemyChargedAttackDamage": 245,
+    "enemyBlockDamage": 26,
+    "enemyCritDamage": 95,
+    "enemyHealAmount": 42
+  },
+  {
+    "name": "Necrotic Gargoyle",
+    "maxEnemyHealth": 2200,
+    "enemyAttackDamage": 110,
+    "enemyChargedAttackDamage": 180,
+    "enemyBlockDamage": 11,
+    "enemyCritDamage": 58,
+    "enemyHealAmount": 27
+  }
+]

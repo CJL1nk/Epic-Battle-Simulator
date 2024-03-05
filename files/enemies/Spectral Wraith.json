@@ -1,0 +1,9 @@
+{
+      "name": "Spectral Wraith",
+      "maxEnemyHealth": 2100,
+      "enemyAttackDamage": 95,
+      "enemyChargedAttackDamage": 165,
+      "enemyBlockDamage": 8,
+      "enemyCritDamage": 45,
+      "enemyHealAmount": 23
+    }

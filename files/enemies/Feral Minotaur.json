@@ -1,0 +1,9 @@
+{
+      "name": "Feral Minotaur",
+      "maxEnemyHealth": 1900,
+      "enemyAttackDamage": 85,
+      "enemyChargedAttackDamage": 155,
+      "enemyBlockDamage": 6,
+      "enemyCritDamage": 42,
+      "enemyHealAmount": 21
+    }

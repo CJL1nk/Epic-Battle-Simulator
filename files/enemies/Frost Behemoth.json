@@ -1,0 +1,9 @@
+{
+      "name": "Frost Behemoth",
+      "maxEnemyHealth": 2500,
+      "enemyAttackDamage": 120,
+      "enemyChargedAttackDamage": 200,
+      "enemyBlockDamage": 15,
+      "enemyCritDamage": 60,
+      "enemyHealAmount": 30
+    }

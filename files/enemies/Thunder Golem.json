@@ -1,0 +1,9 @@
+{
+      "name": "Thunder Golem",
+      "maxEnemyHealth": 3000,
+      "enemyAttackDamage": 150,
+      "enemyChargedAttackDamage": 220,
+      "enemyBlockDamage": 20,
+      "enemyCritDamage": 80,
+      "enemyHealAmount": 35
+    }

@@ -1,0 +1,9 @@
+{
+      "name": "Dark Phoenix",
+      "maxEnemyHealth": 2500,
+      "enemyAttackDamage": 120,
+      "enemyChargedAttackDamage": 190,
+      "enemyBlockDamage": 13,
+      "enemyCritDamage": 63,
+      "enemyHealAmount": 29
+    }

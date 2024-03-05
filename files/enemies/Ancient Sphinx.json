@@ -1,0 +1,9 @@
+{
+      "name": "Ancient Sphinx",
+      "maxEnemyHealth": 3100,
+      "enemyAttackDamage": 155,
+      "enemyChargedAttackDamage": 225,
+      "enemyBlockDamage": 21,
+      "enemyCritDamage": 82,
+      "enemyHealAmount": 36
+    }

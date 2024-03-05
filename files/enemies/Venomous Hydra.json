@@ -1,0 +1,9 @@
+{
+      "name": "Venomous Hydra",
+      "maxEnemyHealth": 2200,
+      "enemyAttackDamage": 110,
+      "enemyChargedAttackDamage": 190,
+      "enemyBlockDamage": 12,
+      "enemyCritDamage": 55,
+      "enemyHealAmount": 27
+    }

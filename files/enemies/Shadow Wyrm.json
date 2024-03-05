@@ -1,0 +1,9 @@
+{
+      "name": "Shadow Wyrm",
+      "maxEnemyHealth": 1800,
+      "enemyAttackDamage": 90,
+      "enemyChargedAttackDamage": 160,
+      "enemyBlockDamage": 5,
+      "enemyCritDamage": 70,
+      "enemyHealAmount": 20
+    }
