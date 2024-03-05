@@ -1,0 +1,481 @@
+[
+  {
+    "name": "Training Sword",
+    "type": "Weapon",
+    "description": "A simple sword used for training. Deals minimal damage.",
+    "effect": {
+      "attackDamageIncrease": 5
+    },
+    "tier": 1,
+    "dropChance": {
+      "1": 0.8,
+      "2": 0.9,
+      "3": 0.9,
+      "4": 0.9,
+      "5": 0.9,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Rusty Dagger",
+    "type": "Weapon",
+    "description": "An old and rusty dagger. Deals minimal damage.",
+    "effect": {
+      "attackDamageIncrease": 10
+    },
+    "tier": 1,
+    "dropChance": {
+      "1": 0.7,
+      "2": 0.7,
+      "3": 0.7,
+      "4": 0.7,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Warrior's Axe",
+    "type": "Weapon",
+    "description": "A powerful axe wielded by warriors. Increases attack damage by 20.",
+    "effect": {
+      "attackDamageIncrease": 20
+    },
+    "tier": 3,
+    "dropChance": {
+      "1": 0.08,
+      "2": 0.09,
+      "3": 0.5,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Mage's Staff",
+    "type": "Weapon",
+    "description": "A magical staff used by mages. Increases charged attack damage by 25.",
+    "effect": {
+      "chargedAttackDamageIncrease": 25
+    },
+    "tier": 3,
+    "dropChance": {
+      "1": 0.09,
+      "2": 0.1,
+      "3": 0.4,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Bow of the Archer",
+    "type": "Weapon",
+    "description": "A bow crafted by expert archers. Increases attack damage by 25.",
+    "effect": {
+      "attackDamageIncrease": 25
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.07,
+      "2": 0.08,
+      "3": 0.1,
+      "4": 0.7,
+      "5": 0.8,
+      "0": 0.8
+    }
+  },
+  {
+    "name": "Staff of the Elementalist",
+    "type": "Weapon",
+    "description": "A staff imbued with elemental magic. Increases critical damage by 20.",
+    "effect": {
+      "critDamageIncrease": 20
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.3,
+      "3": 0.5,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Sword of the Paladin",
+    "type": "Weapon",
+    "description": "A holy sword wielded by paladins. Increases attack damage by 30.",
+    "effect": {
+      "attackDamageIncrease": 30
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.3,
+      "3": 0.5,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Thunderbolt Hammer",
+    "type": "Weapon",
+    "description": "A hammer infused with lightning. Increases charged attack damage by 35.",
+    "effect": {
+      "chargedAttackDamageIncrease": 35
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.3,
+      "3": 0.5,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Legendary Amulet",
+    "type": "Accessory",
+    "description": "A legendary amulet imbued with immense power. Grants incredible abilities.",
+    "effect": {
+      "attackDamageIncrease": 50,
+      "defenseBoost": 50,
+      "critDamageIncrease": 50,
+      "maxHealth": 500
+    },
+    "tier": 0,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.3
+    }
+  },
+  {
+    "name": "Assassin's Blade",
+    "type": "Weapon",
+    "description": "A deadly blade favored by assassins. Increases critical damage by 25.",
+    "effect": {
+      "critDamageIncrease": 25
+    },
+    "tier": 2,
+    "dropChance": {
+      "1": 0.2,
+      "2": 0.4,
+      "3": 0.6,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Frostbite Dagger",
+    "type": "Weapon",
+    "description": "A dagger enchanted with frost magic. Increases attack damage by 15.",
+    "effect": {
+      "attackDamageIncrease": 15
+    },
+    "tier": 2,
+    "dropChance": {
+      "1": 0.3,
+      "2": 0.5,
+      "3": 0.7,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Spear of Valor",
+    "type": "Weapon",
+    "description": "A spear wielded by brave warriors. Increases attack damage by 25.",
+    "effect": {
+      "attackDamageIncrease": 25
+    },
+    "tier": 3,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.3,
+      "3": 0.5,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Divine Bow",
+    "type": "Weapon",
+    "description": "A bow blessed by divine power. Increases attack damage by 30.",
+    "effect": {
+      "attackDamageIncrease": 30
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.3,
+      "4": 0.7,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Scepter of the Magus",
+    "type": "Weapon",
+    "description": "A scepter infused with magical energy. Increases charged attack damage by 30.",
+    "effect": {
+      "chargedAttackDamageIncrease": 30
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.3,
+      "3": 0.5,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Sword of Kings",
+    "type": "Weapon",
+    "description": "A sword wielded by legendary kings. Increases attack damage by 40.",
+    "effect": {
+      "attackDamageIncrease": 40
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.2,
+      "4": 0.7,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Celestial Staff",
+    "type": "Weapon",
+    "description": "A staff infused with celestial energy. Increases critical damage by 30.",
+    "effect": {
+      "critDamageIncrease": 30
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.2,
+      "4": 0.7,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Demonic Blade",
+    "type": "Weapon",
+    "description": "A blade imbued with demonic power. Increases attack damage by 50.",
+    "effect": {
+      "attackDamageIncrease": 50
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Wand of the Arcanist",
+    "type": "Weapon",
+    "description": "A wand favored by arcane spellcasters. Increases charged attack damage by 40.",
+    "effect": {
+      "chargedAttackDamageIncrease": 40
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Titanic Warhammer",
+    "type": "Weapon",
+    "description": "A massive warhammer wielded by titans. Increases attack damage by 60.",
+    "effect": {
+      "attackDamageIncrease": 60
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Shadow Blade",
+    "type": "Weapon",
+    "description": "A blade infused with shadow magic. Increases critical damage by 40.",
+    "effect": {
+      "critDamageIncrease": 40
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Ethereal Bow",
+    "type": "Weapon",
+    "description": "A bow made from ethereal materials. Increases attack damage by 50.",
+    "effect": {
+      "attackDamageIncrease": 50
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Heavenly Rapier",
+    "type": "Weapon",
+    "description": "A rapier forged in the heavens. Increases critical damage by 50.",
+    "effect": {
+      "critDamageIncrease": 50
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Void Scythe",
+    "type": "Weapon",
+    "description": "A scythe made from the void. Increases attack damage by 70.",
+    "effect": {
+      "attackDamageIncrease": 70
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Chrono Staff",
+    "type": "Weapon",
+    "description": "A staff that manipulates time itself. Increases charged attack damage by 50.",
+    "effect": {
+      "chargedAttackDamageIncrease": 50
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Sunfire Greatsword",
+    "type": "Weapon",
+    "description": "A greatsword forged from the sun's flames. Increases attack damage by 80.",
+    "effect": {
+      "attackDamageIncrease": 80
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Abyssal Staff",
+    "type": "Weapon",
+    "description": "A staff containing the power of the abyss. Increases critical damage by 60.",
+    "effect": {
+      "critDamageIncrease": 60
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Dragon's Breath Bow",
+    "type": "Weapon",
+    "description": "A bow that unleashes the fury of dragons. Increases attack damage by 100.",
+    "effect": {
+      "attackDamageIncrease": 100
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  },
+  {
+    "name": "Necromancer's Scepter",
+    "type": "Weapon",
+    "description": "A scepter used by necromancers. Increases charged attack damage by 60.",
+    "effect": {
+      "chargedAttackDamageIncrease": 60
+    },
+    "tier": 6,
+    "dropChance": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "0": 0.1
+    }
+  }
+]

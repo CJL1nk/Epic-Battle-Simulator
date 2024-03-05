@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Healing Potion",
+    "type": "Consumable",
+    "description": "Restores a moderate amount of health.",
+    "effect": {
+      "healthRestore": 50
+    },
+    "tier": 1,
+    "dropChance": {
+      "1": 0.6,
+      "2": 0.7,
+      "3": 0.8,
+      "4": 0.9,
+      "5": 0.95,
+      "0": 1
+    }
+  },
+  {
+    "name": "Potion of Strength",
+    "type": "Consumable",
+    "description": "Temporarily increases attack power.",
+    "effect": {
+      "attackBoost": 10
+    },
+    "tier": 1,
+    "dropChance": {
+      "1": 0.5,
+      "2": 0.6,
+      "3": 0.7,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Potion of Defense",
+    "type": "Consumable",
+    "description": "Temporarily increases defense.",
+    "effect": {
+      "defenseBoost": 10
+    },
+    "tier": 1,
+    "dropChance": {
+      "1": 0.5,
+      "2": 0.6,
+      "3": 0.7,
+      "4": 0.8,
+      "5": 0.9,
+      "0": 1
+    }
+  },
+  {
+    "name": "Greater Healing Potion",
+    "type": "Consumable",
+    "description": "Restores a large amount of health.",
+    "effect": {
+      "healthRestore": 100
+    },
+    "tier": 2,
+    "dropChance": {
+      "1": 0.4,
+      "2": 0.5,
+      "3": 0.6,
+      "4": 0.7,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Potion of Strength",
+    "type": "Consumable",
+    "description": "Temporarily increases attack power.",
+    "effect": {
+      "attackBoost": 10
+    },
+    "tier": 2,
+    "dropChance": {
+      "1": 0.4,
+      "2": 0.5,
+      "3": 0.6,
+      "4": 0.7,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Potion of Defense",
+    "type": "Consumable",
+    "description": "Temporarily increases defense.",
+    "effect": {
+      "defenseBoost": 10
+    },
+    "tier": 2,
+    "dropChance": {
+      "1": 0.4,
+      "2": 0.5,
+      "3": 0.6,
+      "4": 0.7,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Ultimate Healing Potion",
+    "type": "Consumable",
+    "description": "Restores a significant amount of health.",
+    "effect": {
+      "healthRestore": 400
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.4,
+      "5": 0.7,
+      "0": 0.8
+    }
+  },
+  {
+    "name": "Elixir of Power",
+    "type": "Consumable",
+    "description": "Greatly increases attack power for a short duration.",
+    "effect": {
+      "attackBoost": 50
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.2,
+      "2": 0.3,
+      "3": 0.4,
+      "4": 0.5,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Elixir of Fortification",
+    "type": "Consumable",
+    "description": "Greatly increases defense for a short duration.",
+    "effect": {
+      "defenseBoost": 50
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.2,
+      "2": 0.3,
+      "3": 0.4,
+      "4": 0.5,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Elixir of Life",
+    "type": "Consumable",
+    "description": "Greatly increases Max life Forever",
+    "effect": {
+      "maxHealth": 100
+    },
+    "tier": 0,
+    "dropChance": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.15,
+      "4": 0.2,
+      "5": 0.25,
+      "0": 0.3
+    }
+  }
+]

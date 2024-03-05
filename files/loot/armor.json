@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Leather Tunic",
+    "type": "Armor",
+    "description": "A basic leather tunic. Provides minimal protection.",
+    "effect": {
+      "blockDamageReduction": 5
+    },
+    "tier": 1,
+    "dropChance": 0.8
+  },
+  {
+    "name": "Iron Helmet",
+    "type": "Armor",
+    "description": "A sturdy iron helmet. Provides moderate head protection.",
+    "effect": {
+      "blockDamageReduction": 15
+    },
+    "tier": 2,
+    "dropChance": {
+      "1": 0.5,
+      "2": 0.6,
+      "3": 0.7,
+      "4": 0.8,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Chainmail Vest",
+    "type": "Armor",
+    "description": "A vest made of interlocking chains. Offers decent torso protection.",
+    "effect": {
+      "blockDamageReduction": 20
+    },
+    "tier": 2,
+    "dropChance": {
+      "1": 0.5,
+      "2": 0.6,
+      "3": 0.7,
+      "4": 0.8,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Knight's Shield",
+    "type": "Armor",
+    "description": "A sturdy shield worn by knights. Reduces block damage received by 10.",
+    "effect": {
+      "blockDamageReduction": 10
+    },
+    "tier": 3,
+    "dropChance": 0.4
+  },
+  {
+    "name": "Rogue's Cloak",
+    "type": "Armor",
+    "description": "A stealthy cloak favored by rogues. Increases critical damage by 15.",
+    "effect": {
+      "critDamageIncrease": 15
+    },
+    "tier": 3,
+    "dropChance": 0.4
+  },
+  {
+    "name": "Shadow Cloak",
+    "type": "Armor",
+    "description": "A cloak shrouded in darkness. Increases evasion.",
+    "effect": {
+      "evasionIncrease": 10
+    },
+    "tier": 3,
+    "dropChance": {
+      "1": 0.4,
+      "2": 0.5,
+      "3": 0.6,
+      "4": 0.7,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Shadowstep Boots",
+    "type": "Armor",
+    "description": "Boots that allow silent movement in the shadows. Increases stealth.",
+    "effect": {
+      "stealthIncrease": 10
+    },
+    "tier": 3,
+    "dropChance": {
+      "1": 0.4,
+      "2": 0.5,
+      "3": 0.6,
+      "4": 0.7,
+      "5": 0.8,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Holy Plate Armor",
+    "type": "Armor",
+    "description": "Plate armor blessed by divine light. Provides protection against dark magic.",
+    "effect": {
+      "blockDamageReduction": 30,
+      "darkMagicResistanceIncrease": 20
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.5,
+      "5": 0.7,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Dragon Scale Mail",
+    "type": "Armor",
+    "description": "Armor crafted from dragon scales. Provides fire resistance.",
+    "effect": {
+      "blockDamageReduction": 25,
+      "fireResistanceIncrease": 15
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.2,
+      "2": 0.3,
+      "3": 0.4,
+      "4": 0.6,
+      "5": 0.7,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Spectral Cloak",
+    "type": "Armor",
+    "description": "A cloak woven from ethereal threads. Grants invisibility under moonlight.",
+    "effect": {
+      "invisibilityIncrease": 20
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.5,
+      "5": 0.7,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Enchanted Robe",
+    "type": "Armor",
+    "description": "A robe imbued with magical properties. Enhances spellcasting abilities.",
+    "effect": {
+      "spellPowerIncrease": 20
+    },
+    "tier": 4,
+    "dropChance": {
+      "1": 0.1,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.5,
+      "5": 0.7,
+      "0": 0.9
+    }
+  },
+  {
+    "name": "Ancient Plate Armor",
+    "type": "Armor",
+    "description": "An ancient suit of plate armor. Provides exceptional defense.",
+    "effect": {
+      "blockDamageReduction": 40
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.2,
+      "4": 0.4,
+      "5": 0.6,
+      "0": 0.8
+    }
+  },
+  {
+    "name": "Thunderstorm Gauntlets",
+    "type": "Armor",
+    "description": "Gauntlets infused with the power of thunderstorms. Grants lightning resistance.",
+    "effect": {
+      "blockDamageReduction": 20,
+      "lightningResistanceIncrease": 10
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.2,
+      "4": 0.4,
+      "5": 0.6,
+      "0": 0.8
+    }
+  },
+  {
+    "name": "Adamantium Greaves",
+    "type": "Armor",
+    "description": "Greaves forged from adamantium. Offers unparalleled leg protection.",
+    "effect": {
+      "blockDamageReduction": 30
+    },
+    "tier": 5,
+    "dropChance": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.2,
+      "4": 0.4,
+      "5": 0.6,
+      "0": 0.8
+    }
+  }
+]
