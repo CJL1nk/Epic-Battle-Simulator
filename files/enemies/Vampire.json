@@ -1,4 +1,5 @@
 {
+    "name": "Vampire",
     "maxEnemyHealth": "1250",
     "enemyAttackDamage": "50",
     "enemyChargedAttackDamage": "100",

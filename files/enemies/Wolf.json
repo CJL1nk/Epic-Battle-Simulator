@@ -1,4 +1,5 @@
 {
+    "name": "Wolf",
     "maxEnemyHealth": "750",
     "enemyAttackDamage": "75",
     "enemyChargedAttackDamage": "200",

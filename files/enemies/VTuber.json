@@ -1,4 +1,5 @@
 {
+    "name": "VTuber",
     "maxEnemyHealth": "300",
     "enemyAttackDamage": "500",
     "enemyChargedAttackDamage": "1250",

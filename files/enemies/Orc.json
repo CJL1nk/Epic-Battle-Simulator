@@ -1,4 +1,5 @@
 {
+    "name": "Orc",
     "maxEnemyHealth": "1500",
     "enemyAttackDamage": "75",
     "enemyChargedAttackDamage": "125",

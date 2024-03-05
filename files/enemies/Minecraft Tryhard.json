@@ -1,4 +1,5 @@
 {
+    "name": "Minecraft Tryhard",
     "maxEnemyHealth": "1250",
     "enemyAttackDamage": "30",
     "enemyChargedAttackDamage": "350",

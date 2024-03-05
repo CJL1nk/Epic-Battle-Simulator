@@ -1,4 +1,5 @@
 {
+    "name": "Bear",
     "maxEnemyHealth": "2000",
     "enemyAttackDamage": "100",
     "enemyChargedAttackDamage": "175",

@@ -1,4 +1,5 @@
 {
+    "name": "Ogre",
     "maxEnemyHealth": "2500",
     "enemyAttackDamage": "100",
     "enemyChargedAttackDamage": "200",

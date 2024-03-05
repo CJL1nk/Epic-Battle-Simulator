@@ -1,4 +1,5 @@
 {
+    "name": "Geometry Dash Player",
     "maxEnemyHealth": "500",
     "enemyAttackDamage": "150",
     "enemyChargedAttackDamage": "1000",

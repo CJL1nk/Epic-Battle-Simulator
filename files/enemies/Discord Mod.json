@@ -1,4 +1,5 @@
 {
+    "name": "Discord Mod",
     "maxEnemyHealth": "10000",
     "enemyAttackDamage": "10",
     "enemyChargedAttackDamage": "15",

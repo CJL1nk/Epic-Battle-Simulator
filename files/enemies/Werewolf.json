@@ -1,4 +1,5 @@
 {
+    "name": "Werewolf",
     "maxEnemyHealth": "1500",
     "enemyAttackDamage": "90",
     "enemyChargedAttackDamage": "140",
