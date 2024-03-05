@@ -1,9 +1,10 @@
 {
-    "name": "Dragon",
-    "maxEnemyHealth": "3000",
-    "enemyAttackDamage": "100",
-    "enemyChargedAttackDamage": "150",
-    "enemyBlockDamage": "5",
-    "enemyCritDamage": "50",
-    "enemyHealAmount": "75"
-}
+        "name": "Dragon",
+        "maxEnemyHealth": 3000,
+        "enemyAttackDamage": 100,
+        "enemyChargedAttackDamage": 150,
+        "enemyBlockDamage": 5,
+        "enemyCritDamage": 50,
+        "enemyHealAmount": 75,
+        "tier": 3
+      }

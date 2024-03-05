@@ -1,9 +1,10 @@
 {
-    "name": "Werewolf",
-    "maxEnemyHealth": "1500",
-    "enemyAttackDamage": "90",
-    "enemyChargedAttackDamage": "140",
-    "enemyBlockDamage": "25",
-    "enemyCritDamage": "50",
-    "enemyHealAmount": "75"
-}
+        "name": "Werewolf",
+        "maxEnemyHealth": 1500,
+        "enemyAttackDamage": 90,
+        "enemyChargedAttackDamage": 140,
+        "enemyBlockDamage": 25,
+        "enemyCritDamage": 50,
+        "enemyHealAmount": 75,
+        "tier": 2
+      }

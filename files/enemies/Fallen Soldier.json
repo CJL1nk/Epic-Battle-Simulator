@@ -1,9 +1,10 @@
 {
-    "name": "Fallen Soldier",
-    "maxEnemyHealth": "1000",
-    "enemyAttackDamage": "75",
-    "enemyChargedAttackDamage": "150",
-    "enemyBlockDamage": "50",
-    "enemyCritDamage": "50",
-    "enemyHealAmount": "50"
-}
+        "name": "Fallen Soldier",
+        "maxEnemyHealth": 1000,
+        "enemyAttackDamage": 75,
+        "enemyChargedAttackDamage": 150,
+        "enemyBlockDamage": 50,
+        "enemyCritDamage": 50,
+        "enemyHealAmount": 50,
+        "tier": 1
+      }

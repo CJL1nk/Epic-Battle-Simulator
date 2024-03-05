@@ -1,9 +1,10 @@
 {
-      "name": "Abyssal Kraken",
-      "maxEnemyHealth": 2700,
-      "enemyAttackDamage": 140,
-      "enemyChargedAttackDamage": 205,
-      "enemyBlockDamage": 16,
-      "enemyCritDamage": 75,
-      "enemyHealAmount": 33
-    }
+        "name": "Abyssal Kraken",
+        "maxEnemyHealth": 2700,
+        "enemyAttackDamage": 140,
+        "enemyChargedAttackDamage": 205,
+        "enemyBlockDamage": 16,
+        "enemyCritDamage": 75,
+        "enemyHealAmount": 33,
+        "tier": 3
+      }

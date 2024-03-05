@@ -1,9 +1,10 @@
 {
-      "name": "Crimson Basilisk",
-      "maxEnemyHealth": 2900,
-      "enemyAttackDamage": 135,
-      "enemyChargedAttackDamage": 195,
-      "enemyBlockDamage": 17,
-      "enemyCritDamage": 72,
-      "enemyHealAmount": 34
-    }
+        "name": "Crimson Basilisk",
+        "maxEnemyHealth": 2900,
+        "enemyAttackDamage": 135,
+        "enemyChargedAttackDamage": 195,
+        "enemyBlockDamage": 17,
+        "enemyCritDamage": 72,
+        "enemyHealAmount": 34,
+        "tier": 3
+      }

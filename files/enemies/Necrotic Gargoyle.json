@@ -1,9 +1,10 @@
 {
-      "name": "Necrotic Gargoyle",
-      "maxEnemyHealth": 2200,
-      "enemyAttackDamage": 110,
-      "enemyChargedAttackDamage": 180,
-      "enemyBlockDamage": 11,
-      "enemyCritDamage": 58,
-      "enemyHealAmount": 27
-    }
+        "name": "Necrotic Gargoyle",
+        "maxEnemyHealth": 2200,
+        "enemyAttackDamage": 110,
+        "enemyChargedAttackDamage": 180,
+        "enemyBlockDamage": 11,
+        "enemyCritDamage": 58,
+        "enemyHealAmount": 27,
+        "tier": 3
+      }

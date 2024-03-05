@@ -1,9 +1,10 @@
 {
-    "name": "Troll",
-    "maxEnemyHealth": "600",
-    "enemyAttackDamage": "150",
-    "enemyChargedAttackDamage": "300",
-    "enemyBlockDamage": "10",
-    "enemyCritDamage": "0",
-    "enemyHealAmount": "10"
-}
+        "name": "Troll",
+        "maxEnemyHealth": 600,
+        "enemyAttackDamage": 150,
+        "enemyChargedAttackDamage": 300,
+        "enemyBlockDamage": 10,
+        "enemyCritDamage": 0,
+        "enemyHealAmount": 10,
+        "tier": 1
+      }

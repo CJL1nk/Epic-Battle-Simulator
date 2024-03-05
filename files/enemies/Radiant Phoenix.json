@@ -1,9 +1,10 @@
 {
-      "name": "Radiant Phoenix",
-      "maxEnemyHealth": 2300,
-      "enemyAttackDamage": 105,
-      "enemyChargedAttackDamage": 185,
-      "enemyBlockDamage": 11,
-      "enemyCritDamage": 57,
-      "enemyHealAmount": 26
-    }
+        "name": "Radiant Phoenix",
+        "maxEnemyHealth": 2300,
+        "enemyAttackDamage": 105,
+        "enemyChargedAttackDamage": 185,
+        "enemyBlockDamage": 11,
+        "enemyCritDamage": 57,
+        "enemyHealAmount": 26,
+        "tier": 3
+      }

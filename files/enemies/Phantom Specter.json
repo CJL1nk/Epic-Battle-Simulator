@@ -1,9 +1,10 @@
 {
-      "name": "Phantom Specter",
-      "maxEnemyHealth": 2000,
-      "enemyAttackDamage": 100,
-      "enemyChargedAttackDamage": 170,
-      "enemyBlockDamage": 9,
-      "enemyCritDamage": 48,
-      "enemyHealAmount": 24
-    }
+        "name": "Phantom Specter",
+        "maxEnemyHealth": 2000,
+        "enemyAttackDamage": 100,
+        "enemyChargedAttackDamage": 170,
+        "enemyBlockDamage": 9,
+        "enemyCritDamage": 48,
+        "enemyHealAmount": 24,
+        "tier": 2
+      }

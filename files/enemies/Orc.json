@@ -1,9 +1,10 @@
 {
-    "name": "Orc",
-    "maxEnemyHealth": "1500",
-    "enemyAttackDamage": "75",
-    "enemyChargedAttackDamage": "125",
-    "enemyBlockDamage": "75",
-    "enemyCritDamage": "50",
-    "enemyHealAmount": "75"
-}
+        "name": "Orc",
+        "maxEnemyHealth": 1500,
+        "enemyAttackDamage": 75,
+        "enemyChargedAttackDamage": 125,
+        "enemyBlockDamage": 75,
+        "enemyCritDamage": 50,
+        "enemyHealAmount": 75,
+        "tier": 2
+      }

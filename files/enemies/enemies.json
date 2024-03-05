@@ -187,5 +187,131 @@
     "enemyBlockDamage": 11,
     "enemyCritDamage": 58,
     "enemyHealAmount": 27
+  },
+  {
+    "name": "Discord Mod",
+    "maxEnemyHealth": 10000,
+    "enemyAttackDamage": 10,
+    "enemyChargedAttackDamage": 15,
+    "enemyBlockDamage": 100,
+    "enemyCritDamage": 10,
+    "enemyHealAmount": 10
+  },
+  {
+    "name": "Dragon",
+    "maxEnemyHealth": 3000,
+    "enemyAttackDamage": 100,
+    "enemyChargedAttackDamage": 150,
+    "enemyBlockDamage": 5,
+    "enemyCritDamage": 50,
+    "enemyHealAmount": 75
+  },
+  {
+    "name": "Fallen Soldier",
+    "maxEnemyHealth": 1000,
+    "enemyAttackDamage": 75,
+    "enemyChargedAttackDamage": 150,
+    "enemyBlockDamage": 50,
+    "enemyCritDamage": 50,
+    "enemyHealAmount": 50
+  },
+  {
+    "name": "Geometry Dash Player",
+    "maxEnemyHealth": 500,
+    "enemyAttackDamage": 150,
+    "enemyChargedAttackDamage": 1000,
+    "enemyBlockDamage": 75,
+    "enemyCritDamage": 25,
+    "enemyHealAmount": 100
+  },
+  {
+    "name": "Giant",
+    "maxEnemyHealth": 2000,
+    "enemyAttackDamage": 90,
+    "enemyChargedAttackDamage": 150,
+    "enemyBlockDamage": 30,
+    "enemyCritDamage": 45,
+    "enemyHealAmount": 10
+  },
+  {
+    "name": "Minecraft Tryhard",
+    "maxEnemyHealth": 1250,
+    "enemyAttackDamage": 30,
+    "enemyChargedAttackDamage": 350,
+    "enemyBlockDamage": 75,
+    "enemyCritDamage": 25,
+    "enemyHealAmount": 100
+  },
+  {
+    "name": "Ogre",
+    "maxEnemyHealth": 2500,
+    "enemyAttackDamage": 100,
+    "enemyChargedAttackDamage": 200,
+    "enemyBlockDamage": 25,
+    "enemyCritDamage": 25,
+    "enemyHealAmount": 25
+  },
+  {
+    "name": "Orc",
+    "maxEnemyHealth": 1500,
+    "enemyAttackDamage": 75,
+    "enemyChargedAttackDamage": 125,
+    "enemyBlockDamage": 75,
+    "enemyCritDamage": 50,
+    "enemyHealAmount": 75
+  },
+  {
+    "name": "Troll",
+    "maxEnemyHealth": 600,
+    "enemyAttackDamage": 150,
+    "enemyChargedAttackDamage": 300,
+    "enemyBlockDamage": 10,
+    "enemyCritDamage": 0,
+    "enemyHealAmount": 10
+  },
+  {
+    "name": "Vampire",
+    "maxEnemyHealth": 1250,
+    "enemyAttackDamage": 50,
+    "enemyChargedAttackDamage": 100,
+    "enemyBlockDamage": 25,
+    "enemyCritDamage": 25,
+    "enemyHealAmount": 125
+  },
+  {
+    "name": "VTuber",
+    "maxEnemyHealth": 300,
+    "enemyAttackDamage": 500,
+    "enemyChargedAttackDamage": 1250,
+    "enemyBlockDamage": 400,
+    "enemyCritDamage": 100,
+    "enemyHealAmount": 50
+  },
+  {
+    "name": "Werewolf",
+    "maxEnemyHealth": 1500,
+    "enemyAttackDamage": 90,
+    "enemyChargedAttackDamage": 140,
+    "enemyBlockDamage": 25,
+    "enemyCritDamage": 50,
+    "enemyHealAmount": 75
+  },
+  {
+    "name": "Wolf",
+    "maxEnemyHealth": 750,
+    "enemyAttackDamage": 75,
+    "enemyChargedAttackDamage": 200,
+    "enemyBlockDamage": 10,
+    "enemyCritDamage": 50,
+    "enemyHealAmount": 75
+  },
+  {
+    "name": "Bear",
+    "maxEnemyHealth": 2000,
+    "enemyAttackDamage": 100,
+    "enemyChargedAttackDamage": 175,
+    "enemyBlockDamage": 10,
+    "enemyCritDamage": 50,
+    "enemyHealAmount": 25
   }
 ]

@@ -1,9 +1,10 @@
 {
-      "name": "Chaos Chimera",
-      "maxEnemyHealth": 3500,
-      "enemyAttackDamage": 170,
-      "enemyChargedAttackDamage": 240,
-      "enemyBlockDamage": 25,
-      "enemyCritDamage": 90,
-      "enemyHealAmount": 40
-    }
+        "name": "Chaos Chimera",
+        "maxEnemyHealth": 3500,
+        "enemyAttackDamage": 170,
+        "enemyChargedAttackDamage": 240,
+        "enemyBlockDamage": 25,
+        "enemyCritDamage": 90,
+        "enemyHealAmount": 40,
+        "tier": 4
+      }

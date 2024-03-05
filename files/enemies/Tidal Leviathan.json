@@ -1,9 +1,10 @@
 {
-      "name": "Tidal Leviathan",
-      "maxEnemyHealth": 3200,
-      "enemyAttackDamage": 160,
-      "enemyChargedAttackDamage": 230,
-      "enemyBlockDamage": 22,
-      "enemyCritDamage": 85,
-      "enemyHealAmount": 38
-    }
+        "name": "Tidal Leviathan",
+        "maxEnemyHealth": 3200,
+        "enemyAttackDamage": 160,
+        "enemyChargedAttackDamage": 230,
+        "enemyBlockDamage": 22,
+        "enemyCritDamage": 85,
+        "enemyHealAmount": 38,
+        "tier": 4
+      }

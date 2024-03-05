@@ -1,9 +1,10 @@
 {
-    "name": "Discord Mod",
-    "maxEnemyHealth": "10000",
-    "enemyAttackDamage": "10",
-    "enemyChargedAttackDamage": "15",
-    "enemyBlockDamage": "100",
-    "enemyCritDamage": "10",
-    "enemyHealAmount": "10"
-}
+        "name": "Discord Mod",
+        "maxEnemyHealth": 10000,
+        "enemyAttackDamage": 10,
+        "enemyChargedAttackDamage": 15,
+        "enemyBlockDamage": 100,
+        "enemyCritDamage": 10,
+        "enemyHealAmount": 10,
+        "tier": 6
+      }

@@ -1,9 +1,10 @@
 {
-      "name": "Mystic Unicorn",
-      "maxEnemyHealth": 3600,
-      "enemyAttackDamage": 175,
-      "enemyChargedAttackDamage": 245,
-      "enemyBlockDamage": 26,
-      "enemyCritDamage": 95,
-      "enemyHealAmount": 42
-    }
+        "name": "Mystic Unicorn",
+        "maxEnemyHealth": 3600,
+        "enemyAttackDamage": 175,
+        "enemyChargedAttackDamage": 245,
+        "enemyBlockDamage": 26,
+        "enemyCritDamage": 95,
+        "enemyHealAmount": 42,
+        "tier": 4
+      }

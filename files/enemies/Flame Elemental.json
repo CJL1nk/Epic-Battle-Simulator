@@ -1,9 +1,10 @@
 {
-      "name": "Flame Elemental",
-      "maxEnemyHealth": 2000,
-      "enemyAttackDamage": 100,
-      "enemyChargedAttackDamage": 175,
-      "enemyBlockDamage": 10,
-      "enemyCritDamage": 50,
-      "enemyHealAmount": 25
-    }
+        "name": "Flame Elemental",
+        "maxEnemyHealth": 2000,
+        "enemyAttackDamage": 100,
+        "enemyChargedAttackDamage": 175,
+        "enemyBlockDamage": 10,
+        "enemyCritDamage": 50,
+        "enemyHealAmount": 25,
+        "tier": 2
+      }

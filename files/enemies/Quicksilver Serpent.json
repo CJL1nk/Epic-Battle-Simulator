@@ -1,9 +1,10 @@
 {
-      "name": "Quicksilver Serpent",
-      "maxEnemyHealth": 2400,
-      "enemyAttackDamage": 115,
-      "enemyChargedAttackDamage": 180,
-      "enemyBlockDamage": 13,
-      "enemyCritDamage": 60,
-      "enemyHealAmount": 28
-    }
+        "name": "Quicksilver Serpent",
+        "maxEnemyHealth": 2400,
+        "enemyAttackDamage": 115,
+        "enemyChargedAttackDamage": 180,
+        "enemyBlockDamage": 13,
+        "enemyCritDamage": 60,
+        "enemyHealAmount": 28,
+        "tier": 3
+      }

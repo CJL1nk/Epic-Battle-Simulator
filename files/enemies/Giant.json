@@ -1,9 +1,10 @@
 {
-    "name": "Giant",
-    "maxEnemyHealth": "2000",
-    "enemyAttackDamage": "90",
-    "enemyChargedAttackDamage": "150",
-    "enemyBlockDamage": "30",
-    "enemyCritDamage": "45",
-    "enemyHealAmount": "10"
-}
+        "name": "Giant",
+        "maxEnemyHealth": 2000,
+        "enemyAttackDamage": 90,
+        "enemyChargedAttackDamage": 150,
+        "enemyBlockDamage": 30,
+        "enemyCritDamage": 45,
+        "enemyHealAmount": 10,
+        "tier": 2
+      }

@@ -1,9 +1,10 @@
 {
-      "name": "Ethereal Banshee",
-      "maxEnemyHealth": 2600,
-      "enemyAttackDamage": 125,
-      "enemyChargedAttackDamage": 195,
-      "enemyBlockDamage": 14,
-      "enemyCritDamage": 68,
-      "enemyHealAmount": 31
-    }
+        "name": "Ethereal Banshee",
+        "maxEnemyHealth": 2600,
+        "enemyAttackDamage": 125,
+        "enemyChargedAttackDamage": 195,
+        "enemyBlockDamage": 14,
+        "enemyCritDamage": 68,
+        "enemyHealAmount": 31,
+        "tier": 3
+      }
