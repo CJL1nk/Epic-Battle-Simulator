@@ -9,8 +9,12 @@ import pygame
 if platform == 'win32':
     os.system('title EPIC BATTLE SIMULATOR   V1.4')
 else:
-    print('Running in linux')
+    print('Running in unix')
 
+playersound = os.path.join(os.getcwd(), 'files', 'sounds', 'player')
+musicpath = os.path.join(os.getcwd(), 'files', 'sounds', 'music')
+confpath = os.path.join(os.getcwd(), 'files')
+enemypath = os.path.join(os.getcwd(), 'files', 'enemies')
 
 class color:
    ORANGE = '\033[38;5;208m'
@@ -70,11 +74,7 @@ try:
 
                 case 2:
                     print(f"{color.YELLOW}\n\n You raise your hands to block...{color.END}")
-                    if platform == 'win32':
-                            filename=f"{os.getcwd()}\\files\\sounds\\player\\player_block.wav"
-
-                    else:
-                        filename=f"{os.getcwd()}/files/sounds/player/player_block.wav"
+                    filename = os.path.join(playersound, 'player_block.wav')
 
                     sound = pygame.mixer.Sound(filename)
                     channel2.play(sound)
@@ -116,7 +116,6 @@ try:
     def attackMenu(playerCharged):
 
         choice = -1
-
         print("\n   ATTACK")
         sleep(0.1)
         print(f" [1] {color.RED}Attack{color.END}")
@@ -130,6 +129,7 @@ try:
             print(f" [4] {color.PINK}CHARGED ATTACK{color.END}")
 
         while choice < 1 or choice > 4:
+          try:
 
             sleep(0.25)
 
@@ -140,16 +140,16 @@ try:
                 print("Invalid option!")
                 choice = -1
                 continue
-            
+              
             if playerCharged < 5 and choice == 4:
                 print(f"\n {color.PINK}Charged attack not ready!{color.END}")
                 choice = -1
 
             elif choice < 1 or choice > 4:
                 print(" Invalid option!")
-
+          except KeyboardInterrupt:
+            quit()
         return choice
-
 
     def attack(playerHealth, enemyHealth, enemyBlock):
 
@@ -167,22 +167,15 @@ try:
             print(f" {color.RED}C{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
             damage += playerCritDamage
             
-            if platform == 'win32':
-                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player-crit.wav"
+            filename = os.path.join(os.getcwd(), 'files', 'sounds', 'player', 'player-crit.wav')
                 
-            else:
-                filename=f"{os.getcwd()}/files/sounds/player/player-crit.wav"
                 
             sound = pygame.mixer.Sound(filename)
             channel2.play(sound)
             sleep(1)
             
         else:
-            if platform == 'win32':
-                filename=f"{os.getcwd()}\\files\\sounds\\player\\player-hit-hurt.wav"
-                
-            else:
-                filename=f"{os.getcwd()}/files/sounds/player/player-hit-hurt.wav"
+            filename = os.path.join(playersound, 'player-hit-hurt.wav')
                 
             sound = pygame.mixer.Sound(filename)
             channel2.play(sound)
@@ -205,10 +198,7 @@ try:
 
         playerHealth += playerHealAmount
         
-        if platform == 'win32':
-            filename=f"{os.getcwd()}\\files\\sounds\\player\\player_heal.wav"
-        else:
-            filename=f"{os.getcwd()}/files/sounds/player/player_heal.wav"
+        filename = os.path.join(playersound, 'player_heal.wav')
             
         sound = pygame.mixer.Sound(filename)
         channel2.play(sound)
@@ -228,10 +218,7 @@ try:
     def chargedAttack(playerHealth, enemyHealth, enemyBlock):
 
         damage = playerChargedAttackDamage
-        if platform == 'win32':
-            filename=f"{os.getcwd()}\\files\\sounds\\player\\player_charged.wav"
-        else:
-            filename=f"{os.getcwd()}/files/sounds/player/player_charged.wav"
+        filename = os.path.join(playersound, 'player_charged.wav')
         
         sound = pygame.mixer.Sound(filename)
         channel2.play(sound)
@@ -281,23 +268,14 @@ try:
             if random.randint(0, 9) == 9:
                 print(f" {color.ORANGE}{enemyName}{color.END} hits a {color.RED}c{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
                 damage += enemy.getEnemyCritDamage()
-                
-                if platform == 'win32':
-                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player-crit.wav"
-                
-                else:
-                    filename=f"{os.getcwd()}/files/sounds/player/player-crit.wav"
+                filename = os.path.join(playersound, 'player-crit.wav')
                 
                 sound = pygame.mixer.Sound(filename)
                 channel2.play(sound)
                 sleep(1)
                 
             else:
-                if platform == 'win32':
-                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player-hit-hurt.wav"
-                
-                else:
-                    filename=f"{os.getcwd()}/files/sounds/player/player-hit-hurt.wav"
+                filename = os.path.join(playersound, 'player-hit-hurt.wav')
                 
             sound = pygame.mixer.Sound(filename)
             channel2.play(sound)
@@ -321,10 +299,7 @@ try:
 
             enemyHealth += enemy.getEnemyHealAmount()
             
-            if platform == 'win32':
-                filename=f"{os.getcwd()}\\files\\sounds\\player\\player_heal.wav"
-            else:
-                filename=f"{os.getcwd()}/files/sounds/player/player_heal.wav"
+            filename = os.path.join(playersound, 'player_heal.wav')
             
             sound = pygame.mixer.Sound(filename)
             channel2.play(sound)
@@ -344,12 +319,8 @@ try:
         def enemyChargedAttack(playerHealth, playerBlock):
 
             damage = enemy.getEnemyChargedAttackDamage()
+            filename = os.path.join(playersound, 'player_charged.wav')
             
-            if platform == 'win32':
-                filename=f"{os.getcwd()}\\files\\sounds\\player\\player_charged.wav"
-            else:
-                filename=f"{os.getcwd()}/files/sounds/player/player_charged.wav"
-
             print(f"\n\n {color.ORANGE}{enemyName}{color.END} {color.PINK}CHARGED ATTACKS!{color.END}")
             sleep(1)
 
@@ -395,11 +366,7 @@ try:
             case 2:
                 print(f"\n\n {color.ORANGE}{enemyName}{color.END} {color.YELLOW}raises their hands to block...{color.END}")
                 enemyBlock = True
-                if platform == 'win32':
-                    filename=f"{os.getcwd()}\\files\\sounds\\player\\player_block.wav"
-                
-                else:
-                    filename=f"{os.getcwd()}/files/sounds/player/player_block.wav"
+                filename = os.path.join(playersound, 'player_block.wav')
                 
                 sound = pygame.mixer.Sound(filename)
                 channel2.play(sound)
@@ -551,11 +518,7 @@ try:
 
 
     def play_sound():
-        
-        if platform == 'win32':    
-            filename=f"{os.getcwd()}\\files\\sounds\\music\\Leviathan_SlendStone.wav"
-        else:
-            filename=f"{os.getcwd()}/files/sounds/music/Leviathan_SlendStone.wav"   
+        filename = os.path.join(musicpath, 'Leviathan_SlendStone.wav')
         
         sound = pygame.mixer.Sound(filename)
         # channel1.set_volume(0.7)
@@ -564,27 +527,17 @@ try:
         
     def loadConfig():
         
-        if platform == 'win32':
-            with open(f"{os.getcwd()}\\files\\config.json") as file:
-                configData = json.load(file)
-        else:
-            with open(f"{os.getcwd()}/files/config.json") as file:
-                configData = json.load(file)
-
+        filename = os.path.join(confpath, 'config.json')
+        with open(filename) as file:
+            configData = json.load(file)
         return configData
 
 
-    if platform == 'win32':
-        with open(f'{os.getcwd()}\\files\\enemies\\enemies.enemies') as file:
-            a = file.read()
-            enemies = a.splitlines()
-            enemyName = random.choice(enemies)
-            
-    else:
-        with open(f'{os.getcwd()}/files/enemies/enemies.enemies') as file:
-            a = file.read()
-            enemies = a.splitlines()
-            enemyName = random.choice(enemies)
+    filename = os.path.join(enemypath, 'enemies.enemies')
+    with open(filename) as file:
+        a = file.read()
+        enemies = a.splitlines()
+        enemyName = random.choice(enemies)
 
     class Enemy:
 
@@ -616,14 +569,12 @@ try:
         def getEnemyHealAmount(self):
             return self.enemyHealAmount
 
-    if platform == 'win32':
-        with open(f"{os.getcwd()}\\files\\enemies\\{enemyName}.json") as file:
-            enemyData = json.load(file)
+    filename = os.path.join(enemypath, f'{enemyName}.json')
+
+    with open(filename) as file:
+      enemyData = json.load(file)
             
-    else:
-        with open(f"{os.getcwd()}/files/enemies/{enemyName}.json") as file:
-            enemyData = json.load(file)
-        enemyData = enemyData
+    enemyData = enemyData
     enemy = Enemy(int(enemyData["maxEnemyHealth"]), int(enemyData["enemyAttackDamage"]), int(enemyData["enemyChargedAttackDamage"]), int(enemyData["enemyBlockDamage"]), int(enemyData["enemyCritDamage"]), int(enemyData["enemyHealAmount"]))
 
     try:
