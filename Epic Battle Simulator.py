@@ -13,8 +13,8 @@ else:
 
 playersound = os.path.join(os.getcwd(), 'files', 'sounds', 'player')
 musicpath = os.path.join(os.getcwd(), 'files', 'sounds', 'music')
-confpath = os.path.join(os.getcwd(), 'files')
 enemypath = os.path.join(os.getcwd(), 'files', 'enemies')
+confpath = os.path.join(os.getcwd(), 'files')
 
 class color:
    ORANGE = '\033[38;5;208m'
