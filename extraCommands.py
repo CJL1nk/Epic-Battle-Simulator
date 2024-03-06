@@ -28,6 +28,7 @@ class getloot:
   def __init__(self, tier, num_of_items):
     self.tier = tier
     self.num_items = num_of_items
+    
   def _load_loot_data(self):
     loot_data = []
     loot_paths = ['armor.json', 'consumables.json', 'weapons.json']
@@ -47,14 +48,12 @@ class getloot:
   def _select_items_randomly(self):
       selected_items = []
       for _ in range(self.num_items):
-          total_drop_chance = sum(item.get('drop_chance', 0) for item in self.filtered_loot)
-          random_num = random.uniform(0, total_drop_chance)
-          cumulative_chance = 0
-          for item in self.filtered_loot:
-              cumulative_chance += item.get('drop_chance', 0)
-              if random_num <= cumulative_chance:
-                  selected_items.append(item)
-                  break
+        FilteredLootLen=len(self.filtered_loot)
+        randnumber=random.randrange(0, FilteredLootLen)
+        selected_loot=self.filtered_loot[randnumber]
+        print(selected_loot)
+        selected_items.append(selected_loot)
+
       return selected_items
     
   def loot(self):
