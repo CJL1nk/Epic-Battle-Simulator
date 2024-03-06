@@ -37,7 +37,6 @@ class getloot:
       with open(os.path.join(os.getcwd(), 'files', 'loot', loot_path)) as file:
         loot_data.extend(json.load(file))
       self.loot_data = loot_data
-      # print(loot_data)
 
     return self._filter_loot_by_tier()
 
@@ -51,8 +50,8 @@ class getloot:
         FilteredLootLen=len(self.filtered_loot)
         randnumber=random.randrange(0, FilteredLootLen)
         selected_loot=self.filtered_loot[randnumber]
-        print(selected_loot)
-        selected_items.append(selected_loot)
+        # print(selected_loot)
+        selected_items.append(selected_loot['name'])
 
       return selected_items
     
@@ -88,13 +87,13 @@ def enemycreate():
       pass
 
 @app.command()
-def lootier(
-  tier: int = typer.Argument(..., help="The tier of loot to generate (1-6)"),
+def loot(
+  tier: int = typer.Argument(1  , help="The tier of loot to generate (1-6)"),
   num_items: int = typer.Argument(5, help="Number of items to generate")
 
   ):
-  loot=getloot(tier, num_items)
-  looted=loot.loot()
+  gotloot=getloot(tier, num_items)
+  looted=gotloot.loot()
   print(json.dumps(looted, indent=3))
 
 if __name__ == "__main__":
