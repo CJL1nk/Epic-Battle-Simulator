@@ -99,6 +99,8 @@ try:
         formatted_line = selected_line.format(color=color, enemyName=enemyName)
 
         print(formatted_line)
+        print(f'Enemy Health: {color.GREEN}{enemy.getMaxEnemyHealth()}{color.END}')
+        print(f'Enemy Attack: {color.GREEN}{enemy.getEnemyAttackDamage()}{color.END}')
         sleep(0.5)
 
         while playerHealth > 0 or enemyHealth > 0:
