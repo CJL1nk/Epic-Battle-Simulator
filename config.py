@@ -8,7 +8,8 @@ config = {
     "playerChargedAttackDamage": "150",
     "playerBlockDamage": "50",
     "playerCritDamage": "50",
-    "playerHealAmount": "50"
+    "playerHealAmount": "50",
+    "playerCritHeal": "100"
 }
 
 print(" Default config: ")
@@ -21,6 +22,7 @@ config["playerChargedAttackDamage"] = input(" Enter charged attack damage: ")
 config["playerBlockDamage"] = input(" Enter block resistance: ")
 config["playerCritDamage"] = input(" Enter crit damage: ")
 config["playerHealAmount"] = input(" Enter heal amount: ")
+config["playerCritHeal"] = input(" Enter crit heal amount: ")
 
 with open(f"{os.getcwd()}\\files\\config.json", "w") as file:
     json.dump(config, file, indent = 4)
