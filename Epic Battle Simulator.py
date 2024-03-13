@@ -33,13 +33,14 @@ class color:
 
    
 def rainbow(string):
-    rainbow=[color.RED, color.ORANGE, color.YELLOW, color.GREEN, color.OKBLUE, color.PURPLE]
-    number = 0
-    if number == 6:
-        number == 0
-    for x in string:
-        print(f'{rainbow[number]} {x}')
-        number += 1
+  rainbow=[color.RED, color.ORANGE, color.YELLOW, color.GREEN, color.OKBLUE, color.PURPLE]
+  rainbowedlist=[]
+  number = 1
+  for x in string:
+    rainbowedlist.append(f'{rainbow[number % len(rainbow)]}{x}{color.END}')
+    number+=1
+  return ''.join(rainbowedlist)
+    
 
 pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12) 
 channel1 = pygame.mixer.Channel(0)
