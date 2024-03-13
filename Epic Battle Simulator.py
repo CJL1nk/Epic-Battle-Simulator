@@ -201,7 +201,7 @@ try:
             enemyBlock = False
 
         if random.randint(0, 9) == 9:
-            print(f" {color.RED}C{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
+            print(rainbow(" Critical strike!"))
             damage += playerCritDamage
             
             filename = os.path.join(os.getcwd(), 'files', 'sounds', 'player', 'player-crit.wav')
@@ -270,7 +270,7 @@ try:
             enemyBlock = False
 
         if random.randint(0, 9) == 9:
-            print(f" {color.RED}C{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
+            print(rainbow(" Critical strike!"))
             damage += playerCritDamage
 
         if damage < 0:
@@ -303,7 +303,7 @@ try:
                 playerBlock = False
 
             if random.randint(0, 9) == 9:
-                print(f" {color.ORANGE}{enemyName}{color.END} hits a {color.RED}c{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
+                print(f" {color.ORANGE}{enemyName}{color.END} hits a {rainbow('Critical Strike!')}")
                 damage += enemy.getEnemyCritDamage()
                 filename = os.path.join(playersound, 'player-crit.wav')
                 
@@ -367,7 +367,7 @@ try:
                 playerBlock = False
 
             if random.randint(0, 9) == 9:
-                print(f" {color.ORANGE}{enemyName}{color.END} hits a {color.RED}c{color.ORANGE}r{color.YELLOW}i{color.GREEN}t{color.OKBLUE}i{color.PURPLE}c{color.RED}a{color.YELLOW}l{color.END} {color.GREEN}s{color.OKBLUE}t{color.PURPLE}r{color.RED}i{color.ORANGE}k{color.YELLOW}e{color.GREEN}!{color.END}")
+                print(f" {color.ORANGE}{enemyName}{color.END} hits a {rainbow('Critical Strike!')}")
                 damage += enemy.getEnemyCritDamage()
 
             if damage < 0:
