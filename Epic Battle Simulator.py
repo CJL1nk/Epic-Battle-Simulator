@@ -40,7 +40,10 @@ def rainbow(string):
     rainbowedlist.append(f'{rainbow[number % len(rainbow)]}{x}{color.END}')
     number+=1
   return ''.join(rainbowedlist)
-    
+
+def crit_calculator(crit_chance: float):
+  return random.random() <= crit_chance
+
 
 pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12) 
 channel1 = pygame.mixer.Channel(0)
@@ -200,7 +203,7 @@ try:
             damage -= enemy.getEnemyBlockDamage()
             enemyBlock = False
 
-        if random.randint(0, 9) == 9:
+        if random.randrange(10) == 9:
             print(rainbow(" Critical strike!"))
             damage += playerCritDamage
             
@@ -233,7 +236,11 @@ try:
 
     def heal(playerHealth):
 
-        playerHealth += playerHealAmount
+        if crit_calculator(.3) == True:
+          print(rainbow(' Crit Heal!'))
+          playerHealth += playerCritHeal
+        else:
+          playerHealth += playerHealAmount
         
         filename = os.path.join(playersound, 'player_heal.wav')
             
@@ -622,6 +629,7 @@ try:
         playerBlockDamage = int(configData["playerBlockDamage"])
         playerCritDamage = int(configData["playerCritDamage"])
         playerHealAmount = int(configData["playerHealAmount"])
+        playerCritHeal = int(configData['playerCritHeal'])
 
     except:
         maxPlayerHealth = 1000
