@@ -57,8 +57,44 @@ try:
 
         thread = Thread(target=play_sound)
         thread.start()
+        enemybehold = [
+            "Behold, {color.ORANGE}{enemyName}{color.END} approaches!",
+            "{color.ORANGE}{enemyName}{color.END} emerges from the shadows!",
+            "Prepare yourselves for {color.ORANGE}{enemyName}{color.END}!",
+            "Incoming: {color.ORANGE}{enemyName}{color.END}!",
+            "{color.ORANGE}{enemyName}{color.END} draws near!",
+            "Watch out! Here comes {color.ORANGE}{enemyName}{color.END}!",
+            "Beware! {color.ORANGE}{enemyName}{color.END} is here!",
+            "{color.ORANGE}{enemyName}{color.END} enters the fray!",
+            "It's A {color.ORANGE}{enemyName}{color.END}! Brace yourselves!",
+            "{color.ORANGE}{enemyName}{color.END} is on the horizon!",
+            "{color.PINK}{enemyName}{color.END} appears, ready to fight!",
+            "With a roar, {color.PINK}{enemyName}{color.END} charges into view!",
+            "The ground trembles as {color.PINK}{enemyName}{color.END} draws near!",
+            "From the depths, {color.PINK}{enemyName}{color.END} emerges!",
+            "{color.PINK}{enemyName}{color.END} looms ominously in the distance!",
+            "In a flash of light, {color.PINK}{enemyName}{color.END} appears!",
+            "{color.PINK}{enemyName}{color.END} is here to test your mettle!",
+            "With a sinister grin, {color.PINK}{enemyName}{color.END} approaches!",
+            "Prepare yourselves, for {color.PINK}{enemyName}{color.END} is near!",
+            "{color.PINK}{enemyName}{color.END} strikes a menacing pose!",
+            "It's {color.PINK}{enemyName}{color.END}! Get ready for a showdown!",
+            "With a wicked cackle, {color.PINK}{enemyName}{color.END} arrives!",
+            "Fear not the shadows, fear {color.PINK}{enemyName}{color.END}!",
+            "{color.PINK}{enemyName}{color.END} lurks in the darkness, awaiting its prey!",
+            "The air grows cold as {color.PINK}{enemyName}{color.END} draws closer!",
+            "{color.PINK}{enemyName}{color.END} emerges from the mist, ready to strike!",
+            "{color.PINK}{enemyName}{color.END} prowls into view, hunger in its eyes!",
+            "{color.PINK}{enemyName}{color.END} stands tall, a formidable foe!",
+            "With a thunderous roar, {color.PINK}{enemyName}{color.END} announces its presence!",
+            "{color.PINK}{enemyName}{color.END} appears, a force to be reckoned with!",
+            "{color.PINK}{enemyName}{color.END} descends upon you, ready for battle!"
+        ]
 
-        print(f" A wild {color.ORANGE}{enemyName}{color.END} approaches!")
+        selected_line = random.choice(enemybehold)
+        formatted_line = selected_line.format(color=color, enemyName=enemyName)
+
+        print(formatted_line)
         sleep(0.5)
 
         while playerHealth > 0 or enemyHealth > 0:
@@ -596,4 +632,4 @@ try:
 
     start()
 except KeyboardInterrupt:
-    print('KeyboardInterrupt')
+    print('KeyboardInterrupt')#
