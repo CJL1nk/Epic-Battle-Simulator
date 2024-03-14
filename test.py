@@ -23,15 +23,14 @@ def rainbow(string):
     number+=1
   return ''.join(rainbowedlist)
         
-print(rainbow('This is a test'))
 
 
-def random_test():
+def random_test(dropchance: float):
   import random
   yesGacha = 0
   noGacha = 0
   def event_occurs():
-    event=random.random() <= 0.000002
+    event=random.random() <= dropchance
     # print(event)
     return event 
   
@@ -43,14 +42,18 @@ def random_test():
       else:
         noGacha+=1
         pass
-    print(yesGacha)
-    print(noGacha)
+    
+    print(f'Draw: {yesGacha}')
+    print(f'No Draw: {noGacha}')
   except:
     print()
-    print(yesGacha)
-    print(noGacha)
+    print(f'Draw: {yesGacha}')
+    print(f'No Draw: {noGacha}')
     
 def calculate_drop_chance(desired_outcomes:int, possible_outcomes:int):
   return desired_outcomes/possible_outcomes
 
-print(calculate_drop_chance(1, 1000))
+print(rainbow('This is a test'))
+dropchance=calculate_drop_chance(1, 100)
+print(dropchance)
+random_test(dropchance)
