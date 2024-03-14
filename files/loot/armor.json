@@ -2,6 +2,7 @@
   {
       "name": "Leather Tunic",
       "type": "Armor",
+      "equip": "Torso",
       "description": "A basic leather tunic. Provides minimal protection.",
       "effect": {
           "blockDamageReduction": 5
@@ -12,6 +13,7 @@
   {
       "name": "Iron Helmet",
       "type": "Armor",
+      "equip": "head",
       "description": "A sturdy iron helmet. Provides moderate head protection.",
       "effect": {
           "blockDamageReduction": 15
@@ -22,6 +24,7 @@
   {
       "name": "Chainmail Vest",
       "type": "Armor",
+      "equip": "Torso",
       "description": "A vest made of interlocking chains. Offers decent torso protection.",
       "effect": {
           "blockDamageReduction": 20
@@ -32,6 +35,8 @@
   {
       "name": "Knight's Shield",
       "type": "Armor",
+      "equip": "Off-Hand",
+      "hand_mode": 1,
       "description": "A sturdy shield worn by knights. Reduces block damage received by 10.",
       "effect": {
           "blockDamageReduction": 10
@@ -42,6 +47,7 @@
   {
       "name": "Rogue's Cloak",
       "type": "Armor",
+      "equip": "Cloak",
       "description": "A stealthy cloak favored by rogues. Increases critical damage by 15.",
       "effect": {
           "critDamageIncrease": 15
@@ -52,6 +58,7 @@
   {
       "name": "Shadow Cloak",
       "type": "Armor",
+      "equip": "Cloak",
       "description": "A cloak shrouded in darkness. Increases evasion.",
       "effect": {
           "evasionIncrease": 10
@@ -62,6 +69,7 @@
   {
       "name": "Shadowstep Boots",
       "type": "Armor",
+      "equip": "Feet",
       "description": "Boots that allow silent movement in the shadows. Increases stealth.",
       "effect": {
           "stealthIncrease": 10
@@ -72,6 +80,7 @@
   {
       "name": "Holy Plate Armor",
       "type": "Armor",
+      "equip": "Torso",
       "description": "Plate armor blessed by divine light. Provides protection against dark magic.",
       "effect": {
           "blockDamageReduction": 30,
@@ -83,6 +92,7 @@
   {
       "name": "Dragon Scale Mail",
       "type": "Armor",
+      "equip": "Torso",
       "description": "Armor crafted from dragon scales. Provides fire resistance.",
       "effect": {
           "blockDamageReduction": 25,
@@ -94,6 +104,7 @@
   {
       "name": "Spectral Cloak",
       "type": "Armor",
+      "equip": "Cloak",
       "description": "A cloak woven from ethereal threads. Grants invisibility under moonlight.",
       "effect": {
           "invisibilityIncrease": 20
@@ -104,6 +115,7 @@
   {
       "name": "Enchanted Robe",
       "type": "Armor",
+      "equip": "Cloak",
       "description": "A robe imbued with magical properties. Enhances spellcasting abilities.",
       "effect": {
           "spellPowerIncrease": 20
@@ -114,6 +126,7 @@
   {
       "name": "Ancient Plate Armor",
       "type": "Armor",
+      "equip": "Torso",
       "description": "An ancient suit of plate armor. Provides exceptional defense.",
       "effect": {
           "blockDamageReduction": 40
@@ -124,6 +137,7 @@
   {
       "name": "Thunderstorm Gauntlets",
       "type": "Armor",
+      "equip": "Hands",
       "description": "Gauntlets infused with the power of thunderstorms. Grants lightning resistance.",
       "effect": {
           "blockDamageReduction": 20,
@@ -135,6 +149,7 @@
   {
       "name": "Adamantium Greaves",
       "type": "Armor",
+      "equip": "Hands",
       "description": "Greaves forged from adamantium. Offers unparalleled leg protection.",
       "effect": {
           "blockDamageReduction": 30
