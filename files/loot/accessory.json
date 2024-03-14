@@ -1,0 +1,15 @@
+[
+  {
+      "name": "Legendary Amulet",
+      "type": "Accessory",
+      "description": "A legendary amulet imbued with immense power. Grants incredible abilities.",
+      "effect": {
+          "attackDamageIncrease": 50,
+          "defenseBoost": 50,
+          "critDamageIncrease": 50,
+          "maxHealth": 500
+      },
+      "tier": 0,
+      "dropChance": 0.03
+  }
+]

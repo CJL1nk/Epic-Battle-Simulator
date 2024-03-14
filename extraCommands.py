@@ -2,6 +2,9 @@ import json
 import os
 import typer
 import random
+from enum import Enum
+from typing_extensions import Annotated
+from typing import Optional
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -25,9 +28,11 @@ def tier_generator(maxhealth):
   return tier
 
 class getloot:
-  def __init__(self, tier, num_of_items):
+  def __init__(self, tier:Optional[int], num_of_items: Optional[int]):
     self.tier = tier
+    self.num_items = 1
     self.num_items = num_of_items
+    print(self.num_items)
     
   def _load_loot_data(self):
     loot_data = []
@@ -57,6 +62,8 @@ class getloot:
     
   def loot(self):
     return self._load_loot_data()
+  def describe(self):
+    pass
     
 
 
@@ -95,6 +102,13 @@ def loot(
   gotloot=getloot(tier, num_items)
   looted=gotloot.loot()
   print(json.dumps(looted, indent=3))
+
+@app.command()
+def get_description(
+  item: str = typer.Argument(default=None, help='The Name of the item to describe')
+):
+  looted=getloot()
+  pass
 
 if __name__ == "__main__":
   app()
