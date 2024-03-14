@@ -44,6 +44,21 @@ def rainbow(string):
 def crit_calculator(crit_chance: float):
   return random.random() <= crit_chance
 
+def random_probability(how_many: int, out_of: int) -> bool:
+  """Generate a random probability event based on a given ratio.
+
+  Args:
+      how_many (int): Number of favorable outcomes.
+      out_of (int): Total number of possible outcomes.
+
+  Raises:
+      ValueError: If 'out_of' is zero or negative.
+
+  Returns:
+      bool: True if the random event occurs, False otherwise.
+  """
+  probability=how_many / out_of
+  return random.random() <= probability
 
 pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12) 
 channel1 = pygame.mixer.Channel(0)
@@ -145,9 +160,8 @@ try:
             playerHealth, enemyHealth, enemyCharged, playerBlock, enemyBlock = enemyMoveset(playerHealth, enemyHealth, enemyCharged, playerBlock, enemyBlock)
 
             checkHealth(playerHealth, enemyHealth)
-
-            disaster = random.randint(1,100)
-            if disaster >=2 and disaster <=3:
+            disaster=random_probability(1, 100)
+            if disaster:
                 playerHealth, enemyHealth = naturalDisaster(playerHealth, enemyHealth)
             checkHealth(playerHealth, enemyHealth)
 
@@ -238,7 +252,7 @@ try:
 
     def heal(playerHealth):
 
-        if crit_calculator(.3) == True:
+        if random_probability(1, 100):
           print(rainbow(' Crit Heal!'))
           playerHealth += playerCritHeal
         else:
@@ -446,7 +460,7 @@ try:
 
                 match x:
                     case 1:
-                        print(f"\n A meteor falls from the sky and hits you. {color.RED}It deals 300 damage!{color.END}")
+                        print(f"\n A meteor falls from the sky and hits {color.CYAN}you{color.END}. {color.RED}It deals 300 damage!{color.END}")
                         sleep(0.5)
 
                         playerHealth -= 300
@@ -464,7 +478,7 @@ try:
 
                         print(f" Enemy Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
                     case 3:
-                        print(f"\n A meteor falls from the sky and hits you and the {color.ORANGE}{enemyName}{color.END}. {color.RED}It deals 300 damage!{color.END}")
+                        print(f"\n A meteor falls from the sky and hits {color.CYAN}you{color.END} and the {color.ORANGE}{enemyName}{color.END}. {color.RED}It deals 300 damage!{color.END}")
                         sleep(0.5)
 
                         enemyHealth -= 300
@@ -483,7 +497,7 @@ try:
 
                 match x:
                     case 1:
-                        print(f"\n A fairy emerges from the clouds and {color.GREEN}heals you for 250 health!{color.END}")
+                        print(f"\n A fairy emerges from the clouds and {color.GREEN}heals {color.CYAN}you{color.END} for 250 health!{color.END}")
                         sleep(0.5)
 
                         playerHealth += 250
@@ -501,7 +515,7 @@ try:
 
                         print(f" Enemy Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
                     case 3:
-                        print(f"\n A fairy emerges from the clouds and {color.GREEN}heals both you and the {color.ORANGE}{enemyName}{color.END} for 250 health!{color.END}")
+                        print(f"\n A fairy emerges from the clouds and {color.GREEN}heals both {color.CYAN}you{color.END} and the {color.ORANGE}{enemyName}{color.END} for 250 health!{color.END}")
                         sleep(0.5)
 
                         enemyHealth += 250
@@ -522,8 +536,8 @@ try:
 
         foundRod =  False
 
-        hotdog = random.randint(1,10000)
-        rod = random.randint(1,500)
+        hotdog = random_probability(1, 10000)
+        rod = random_probability(1, 500)
 
         if hotdog == 5164:
             sleep(2)
@@ -543,7 +557,7 @@ try:
             foundRod = True
         if foundRod:
 
-            if random.randint(1,100) == 64:
+              if random_probability(1, 100):
 
                 print(" The Adult Eidolon Wyrm emerges from the depths of the abyss and kills you!")
                 playerHealth = 0
@@ -640,6 +654,7 @@ try:
         playerBlockDamage = 50
         playerCritDamage = 50
         playerHealAmount = 50
+        playerCritHeal = 150
 
     start()
 except KeyboardInterrupt:
