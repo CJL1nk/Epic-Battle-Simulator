@@ -573,8 +573,17 @@ try:
             exit(0)
 
         if enemyHealth <= 0:
-            input(f"\n\n\n {color.YELLOW}You win!{color.END}")
-            exit(0)
+            endinput=input(f"""
+\n\n {color.YELLOW}You win!{color.END}
+ [1] Continue
+ [2] Exit
+ >>""")
+            print(endinput)
+            match endinput:
+              case 1:
+                start()
+              case 2:
+                exit(0)
 
 
     def play_sound():
@@ -633,7 +642,7 @@ try:
 
     with open(filename) as file:
       enemyData = json.load(file)
-            
+    
     enemyData = enemyData
     enemy = Enemy(int(enemyData["maxEnemyHealth"]), int(enemyData["enemyAttackDamage"]), int(enemyData["enemyChargedAttackDamage"]), int(enemyData["enemyBlockDamage"]), int(enemyData["enemyCritDamage"]), int(enemyData["enemyHealAmount"]))
 
