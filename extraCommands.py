@@ -105,10 +105,18 @@ def loot(
 
 @app.command()
 def get_description(
-  item: str = typer.Argument(default=None, help='The Name of the item to describe')
+  item: str = typer.Argument(default=None, help='The Name of the item to describe'),
+
 ):
-  looted=getloot()
+  # looted=getloot()
   pass
+
+@app.command()
+def dropchance(
+  desired_outcomes:int = typer.Argument(help='How many times out of possible_outcomes you want to return true'),
+  possible_outcomes:int = typer.Argument(help='How many chances to return positive')
+  ):
+  print(desired_outcomes/possible_outcomes)
 
 if __name__ == "__main__":
   app()
