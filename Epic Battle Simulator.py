@@ -11,8 +11,9 @@ if platform == 'win32':
 else:
     print('Running in unix')
 
-playersound = os.path.join(os.getcwd(), 'files', 'sounds', 'player')
-musicpath = os.path.join(os.getcwd(), 'files', 'sounds', 'music')
+soundbase = os.path.join(os.getcwd(), 'files', 'sounds')
+playersound = os.path.join(soundbase, 'player')
+musicpath = os.path.join(soundbase, 'music')
 enemypath = os.path.join(os.getcwd(), 'files', 'enemies')
 confpath = os.path.join(os.getcwd(), 'files')
 
