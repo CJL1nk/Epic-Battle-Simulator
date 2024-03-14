@@ -577,7 +577,7 @@ try:
 \n\n {color.YELLOW}You win!{color.END}
  [1] Continue
  [2] Exit
- >>""")
+ >> """)
             print(endinput)
             match endinput:
               case 1:
@@ -602,11 +602,18 @@ try:
         return configData
 
 
-    filename = os.path.join(enemypath, 'enemies.enemies')
-    with open(filename) as file:
-        a = file.read()
-        enemies = a.splitlines()
-        enemyName = random.choice(enemies)
+    def random_enemy():
+      filename = os.path.join(enemypath, 'enemies.enemies')
+      with open(filename) as file:
+          a = file.read()
+          enemies = a.splitlines()
+          enemyName = random.choice(enemies)
+          filename = os.path.join(enemypath, f'{enemyName}.json')
+
+          with open(filename) as file:
+            enemyData = json.load(file)
+          
+          return enemyData, enemyName
 
     class Enemy:
 
@@ -618,7 +625,7 @@ try:
             self.enemyBlockDamage = enemyBlockDamage
             self.enemyCritDamage = enemyCritDamage
             self.enemyHealAmount = enemyHealAmount
-
+            self.enemyjson={}
 
         def getMaxEnemyHealth(self):
             return self.maxEnemyHealth
@@ -638,12 +645,9 @@ try:
         def getEnemyHealAmount(self):
             return self.enemyHealAmount
 
-    filename = os.path.join(enemypath, f'{enemyName}.json')
 
-    with open(filename) as file:
-      enemyData = json.load(file)
+    enemyData, enemyName = random_enemy()
     
-    enemyData = enemyData
     enemy = Enemy(int(enemyData["maxEnemyHealth"]), int(enemyData["enemyAttackDamage"]), int(enemyData["enemyChargedAttackDamage"]), int(enemyData["enemyBlockDamage"]), int(enemyData["enemyCritDamage"]), int(enemyData["enemyHealAmount"]))
 
     try:
