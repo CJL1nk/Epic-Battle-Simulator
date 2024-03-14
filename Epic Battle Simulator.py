@@ -539,14 +539,14 @@ try:
         hotdog = random_probability(1, 10000)
         rod = random_probability(1, 500)
 
-        if hotdog == 5164:
+        if hotdog:
             sleep(2)
             print("\n\n !!!")
             sleep(1)
             print(f" {color.PINK}Sans{color.END} emerges from the forest and gives you a hot dog. It was very tasty.")
             sleep(0.5)
 
-        if rod == 345:
+        if rod:
 
             sleep(2)
             print("\n\n !!!")
