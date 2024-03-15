@@ -183,10 +183,9 @@ def disaster(game: Game):
           sleep(0.2)
           print(f" {color.ORANGE}{enemyName}{color.END} Health: {color.GREEN}{enemyHealth}/{enemy.maxEnemyHealth}{color.END}")
 
-        case 2:
-          x = random.randint(1,3)
-
-      match x:
+    case 2:
+      x2 = random.randint(1,3)
+      match x2:
         case 1:
           print(f"\n A fairy emerges from the clouds and {color.GREEN}heals {game.playerCallPrint} for 250 health!{color.END}")
           sleep(0.5)
@@ -195,7 +194,8 @@ def disaster(game: Game):
           if playerHealth > player.maxPlayerHealth:
             playerHealth = player.maxPlayerHealth
 
-          print(f" Player Health: {color.GREEN}{playerHealth}/{player.maxPlayerHealth}{color.END}")
+            print(f" Player Health: {color.GREEN}{playerHealth}/{player.maxPlayerHealth}{color.END}")
+      
         case 2:
           print(f"\n A fairy emerges from the clouds and {color.GREEN}heals the {color.ORANGE}{enemyName}{color.END} for 250 health!{color.END}")
           sleep(0.5)
@@ -219,7 +219,7 @@ def disaster(game: Game):
           print(f" Player Health: {color.GREEN}{playerHealth}/{player.maxPlayerHealth}{color.END}")
           sleep(0.2)
           print(f" {color.ORANGE}{game.enemyName}{color.END} Health: {color.GREEN}{enemyHealth}/{enemy.maxEnemyHealth}{color.END}")
-  
+
 
 
 class Game:
@@ -302,8 +302,9 @@ while True:
     game.start()
     p=player._load_player()
     print(game.encounter())
-    if random_probability(1, 100): # Disasters
+    if random_probability(1, 100): #? Disasters
       disaster(game)
+    
   
   else:
     pass
