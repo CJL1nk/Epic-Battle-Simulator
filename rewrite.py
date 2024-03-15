@@ -87,10 +87,8 @@ class config():
     tier: int
 
 class Enemy:
-  def __init__(self):
-    self.enemyData, self.enemyName=self.random_enemy()
     
-  def random_enemy(self):
+  def randomEnemy(self):
     filename = os.path.join(enemypath, 'enemies.enemies')
     with open(filename) as file:
       a = file.read()
@@ -116,30 +114,31 @@ class Game:
   def __init__(self):
     thread = Thread(target=self._music())
     thread.start()
-    self._load_enemy()
+    self._loadEnemy()
+    self.playerCallPrint=f'{color.CYAN}You{color.END}'
     self.enemyAppear=[
-            "Behold, {color.ORANGE}{enemyName}{color.END} approaches!",
-            "{color.ORANGE}{enemyName}{color.END} emerges from the shadows!",
-            "With a roar, {color.ORANGE}{enemyName}{color.END} charges into view!",
-            "The ground trembles as {color.ORANGE}{enemyName}{color.END} draws near!",
-            "From the depths, {color.ORANGE}{enemyName}{color.END} emerges!",
-            "{color.ORANGE}{enemyName}{color.END} looms ominously in the distance!",
-            "In a flash of light, {color.ORANGE}{enemyName}{color.END} appears!",
-            "{color.ORANGE}{enemyName}{color.END} is here to test your mettle!",
-            "With a sinister grin, {color.ORANGE}{enemyName}{color.END} approaches!",
-            "Prepare yourselves, for {color.ORANGE}{enemyName}{color.END} is near!",
-            "{color.ORANGE}{enemyName}{color.END} strikes a menacing pose!",
-            "It's {color.ORANGE}{enemyName}{color.END}! Get ready for a showdown!",
-            "With a wicked cackle, {color.ORANGE}{enemyName}{color.END} arrives!",
-            "Fear not the shadows, fear {color.ORANGE}{enemyName}{color.END}!",
-            "{color.ORANGE}{enemyName}{color.END} lurks in the darkness, awaiting its prey!",
-            "The air grows cold as {color.ORANGE}{enemyName}{color.END} draws closer!",
-            "{color.ORANGE}{enemyName}{color.END} emerges from the mist, ready to strike!",
-            "{color.ORANGE}{enemyName}{color.END} prowls into view, hunger in its eyes!",
-            "{color.ORANGE}{enemyName}{color.END} stands tall, a formidable foe!",
-            "With a thunderous roar, {color.ORANGE}{enemyName}{color.END} announces its presence!",
-            "{color.ORANGE}{enemyName}{color.END} appears, a force to be reckoned with!",
-            "{color.ORANGE}{enemyName}{color.END} descends upon you, ready for battle!"]
+            " Behold, {color.ORANGE}{enemyName}{color.END} approaches!",
+            " {color.ORANGE}{enemyName}{color.END} emerges from the shadows!",
+            " With a roar, {color.ORANGE}{enemyName}{color.END} charges into view!",
+            " The ground trembles as {color.ORANGE}{enemyName}{color.END} draws near!",
+            " From the depths, {color.ORANGE}{enemyName}{color.END} emerges!",
+            " {color.ORANGE}{enemyName}{color.END} looms ominously in the distance!",
+            " In a flash of light, {color.ORANGE}{enemyName}{color.END} appears!",
+            " {color.ORANGE}{enemyName}{color.END} is here to test your mettle!",
+            " With a sinister grin, {color.ORANGE}{enemyName}{color.END} approaches!",
+            " Prepare yourselves, for {color.ORANGE}{enemyName}{color.END} is near!",
+            " {color.ORANGE}{enemyName}{color.END} strikes a menacing pose!",
+            " It's {color.ORANGE}{enemyName}{color.END}! Get ready for a showdown!",
+            " With a wicked cackle, {color.ORANGE}{enemyName}{color.END} arrives!",
+            " Fear not the shadows, fear {color.ORANGE}{enemyName}{color.END}!",
+            " {color.ORANGE}{enemyName}{color.END} lurks in the darkness, awaiting its prey!",
+            " The air grows cold as {color.ORANGE}{enemyName}{color.END} draws closer!",
+            " {color.ORANGE}{enemyName}{color.END} emerges from the mist, ready to strike!",
+            " {color.ORANGE}{enemyName}{color.END} prowls into view, hunger in its eyes!",
+            " {color.ORANGE}{enemyName}{color.END} stands tall, a formidable foe!",
+            " With a thunderous roar, {color.ORANGE}{enemyName}{color.END} announces its presence!",
+            " {color.ORANGE}{enemyName}{color.END} appears, a force to be reckoned with!",
+            " {color.ORANGE}{enemyName}{color.END} descends upon you, ready for battle!"]
 
   def _music(self):
     filename = os.path.join(musicpath, 'Leviathan_SlendStone.wav')
@@ -148,7 +147,7 @@ class Game:
     # channel1.set_volume(0.7)
     channel1.play(sound, loops = -1)
 
-  def load_config(self, confpath):
+  def loadConfig(self, confpath):
     with open(confpath, 'r') as file:
       enemyData=json.load(file)
       try:
@@ -156,14 +155,19 @@ class Game:
       except ValidationError as e:
         raise ValueError(f"Invalid player config file at \n {confpath}: \n{e}")
 
-  def _load_enemy(self):
+  def _loadEnemy(self):
     self.enemy=Enemy()
-    self.enemyData, self.enemyName = self.enemy.random_enemy()
+    self.enemyData, self.enemyName = self.enemy.randomEnemy()
 
   def encounter(self):
     selected_line = random.choice(self.enemyAppear)
     formatted_line = selected_line.format(color=color, enemyName=self.enemyName)
     return formatted_line
+  
+  def play(self):
+    
+    
+    pass
 
 
 enemy=Enemy()
