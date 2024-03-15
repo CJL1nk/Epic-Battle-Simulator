@@ -6,7 +6,8 @@
     "enemyChargedAttackDamage": 175,
     "enemyBlockDamage": 10,
     "enemyCritDamage": 50,
-    "enemyHealAmount": 25
+    "enemyHealAmount": 25,
+    "tier": 4
   },
   {
     "name": "Frost Behemoth",
