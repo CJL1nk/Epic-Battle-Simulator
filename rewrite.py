@@ -7,8 +7,8 @@ from sys import platform
 import pygame
 from pydantic import BaseModel, ValidationError
 from munch import munchify
-
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+
 if platform == 'win32':
     os.system('title EPIC BATTLE SIMULATOR   V1.4')
 else:
@@ -113,20 +113,10 @@ class Enemy:
 
 
 class Game:
-  def __init__(self, enemy):
+  def __init__(self):
     thread = Thread(target=self._music())
     thread.start()
-
-    # enemy = munchify(enemy)
-    # self.maxEnemyHealth = enemy.maxEnemyHealth
-    # self.enemyAttackDamage = enemy.enemyAttackDamage
-    # self.enemyChargedAttackDamage = enemy.enemyChargedAttackDamage
-    # self.enemyBlockDamage = enemy.enemyBlockDamage
-    # self.enemyCritDamage = enemy.enemyCritDamage
-    # self.enemyHealAmount = enemy.enemyHealAmount
-    # self.enemyjson={}
-    self.enemy = enemy
-    self.enemyName = 
+    self._load_enemy()
     self.enemyAppear=[
             "Behold, {color.ORANGE}{enemyName}{color.END} approaches!",
             "{color.ORANGE}{enemyName}{color.END} emerges from the shadows!",
@@ -166,16 +156,22 @@ class Game:
       except ValidationError as e:
         raise ValueError(f"Invalid player config file at \n {confpath}: \n{e}")
 
+  def _load_enemy(self):
+    self.enemy=Enemy()
+    self.enemyData, self.enemyName = self.enemy.random_enemy()
+
   def encounter(self):
     selected_line = random.choice(self.enemyAppear)
     formatted_line = selected_line.format(color=color, enemyName=self.enemyName)
+    return formatted_line
 
 
 enemy=Enemy()
 started=False
 while True:
   if not started:
-    game=Game(enemy)
+    game=Game()
+    print(game.encounter())
     started=True
   else:
     pass
