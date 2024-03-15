@@ -3,12 +3,12 @@ import os
 from time import sleep
 
 config = {
-    "maxPlayerHealth": "1000",
-    "playerAttackDamage": "75",
-    "playerChargedAttackDamage": "150",
-    "playerBlockDamage": "50",
-    "playerCritDamage": "50",
-    "playerHealAmount": "50",
+    "maxPlayerHealth": 1000,
+    "playerAttackDamage": 75,
+    "playerChargedAttackDamage": 150,
+    "playerBlockDamage": 50,
+    "playerCritDamage": 50,
+    "playerHealAmount": 50,
     "playerCritHeal": "100"
 }
 
