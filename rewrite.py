@@ -108,6 +108,89 @@ class Enemy:
     # selected_line = random.choice(enemybehold)
     # formatted_line = selected_line.format(color=color, enemyName=enemyName)
 
+def disaster(game):
+  sleep(2)
+  print("\n\n ???")
+  sleep(1)
+
+  disasterVar = random.randint(1,2)
+
+  match disasterVar:
+
+    case 1:
+      x = random.randint(1,3)
+
+      match x:
+        case 1:
+          print(f"\n A meteor falls from the sky and hits {color.CYAN}you{color.END}. {color.RED}It deals 300 damage!{color.END}")
+          sleep(0.5)
+
+          playerHealth -= 300
+          if playerHealth < 0:
+            playerHealth = 0
+
+          print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
+        case 2:
+          print(f"\n A meteor falls from the sky and hits the {color.ORANGE}{enemyName}{color.END}. {color.RED}It deals 300 damage!{color.END}")
+          sleep(0.5)
+
+          enemyHealth -= 300
+          if enemyHealth < 0:
+            enemyHealth = 0
+
+          print(f" Enemy Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
+        case 3:
+          print(f"\n A meteor falls from the sky and hits {color.CYAN}you{color.END} and the {color.ORANGE}{enemyName}{color.END}. {color.RED}It deals 300 damage!{color.END}")
+          sleep(0.5)
+
+          enemyHealth -= 300
+          playerHealth -= 300
+          if playerHealth < 0:
+            playerHealth = 0
+          if enemyHealth < 0:
+            enemyHealth = 0
+
+          print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
+          sleep(0.2)
+          print(f" {color.ORANGE}{enemyName}{color.END} Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
+
+        case 2:
+          x = random.randint(1,3)
+
+      match x:
+        case 1:
+          print(f"\n A fairy emerges from the clouds and {color.GREEN}heals {color.CYAN}you{color.END} for 250 health!{color.END}")
+          sleep(0.5)
+
+          playerHealth += 250
+          if playerHealth > maxPlayerHealth:
+          playerHealth = maxPlayerHealth
+
+          print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
+        case 2:
+          print(f"\n A fairy emerges from the clouds and {color.GREEN}heals the {color.ORANGE}{enemyName}{color.END} for 250 health!{color.END}")
+          sleep(0.5)
+
+          enemyHealth += 250
+          if enemyHealth > enemy.getMaxEnemyHealth():
+            enemyHealth = enemy.getMaxEnemyHealth()
+
+          print(f" Enemy Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
+        case 3:
+          print(f"\n A fairy emerges from the clouds and {color.GREEN}heals both {color.CYAN}you{color.END} and the {color.ORANGE}{enemyName}{color.END} for 250 health!{color.END}")
+          sleep(0.5)
+
+          enemyHealth += 250
+          playerHealth += 250
+          if playerHealth > maxPlayerHealth:
+            playerHealth = maxPlayerHealth
+          if enemyHealth > enemy.getMaxEnemyHealth():
+            enemyHealth = enemy.getMaxEnemyHealth()
+
+          print(f" Player Health: {color.GREEN}{playerHealth}/{maxPlayerHealth}{color.END}")
+          sleep(0.2)
+          print(f" {color.ORANGE}{game.enemyName}{color.END} Health: {color.GREEN}{enemyHealth}/{enemy.getMaxEnemyHealth()}{color.END}")
+  
 
 
 class Game:
@@ -115,6 +198,7 @@ class Game:
     thread = Thread(target=self._music())
     thread.start()
     self._loadEnemy()
+    self._loadPlayer()
     self.playerCallPrint=f'{color.CYAN}You{color.END}'
     self.enemyAppear=[
             " Behold, {color.ORANGE}{enemyName}{color.END} approaches!",
@@ -155,9 +239,16 @@ class Game:
       except ValidationError as e:
         raise ValueError(f"Invalid player config file at \n {confpath}: \n{e}")
 
+  def returnjson(self): 
+    """Does exactly what it says, returns enemy json"""
+    return self.enemyData
+  
   def _loadEnemy(self):
     self.enemy=Enemy()
     self.enemyData, self.enemyName = self.enemy.randomEnemy()
+
+  def _loadPlayer(self):
+    self.player=Player
 
   def encounter(self):
     selected_line = random.choice(self.enemyAppear)
@@ -177,6 +268,10 @@ while True:
     game=Game()
     print(game.encounter())
     started=True
+    if random_probability(1, 100): # Disasters
+      
+      
+  
   else:
     pass
 
