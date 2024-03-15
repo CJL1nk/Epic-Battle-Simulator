@@ -302,7 +302,7 @@ while True:
     game.start()
     p=player._load_player()
     print(game.encounter())
-    if random_probability(1, 1): # Disasters
+    if random_probability(1, 100): # Disasters
       disaster(game)
   
   else:
